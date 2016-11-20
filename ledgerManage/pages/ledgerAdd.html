@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+        <form action="javascript:void(0)">
+                  <div class="infor">
+<!--                   合同相关信息-->
+                    <div class="heton-infor">
+                        合同&项目信息
+                        <span class="tools">
+                            <span class="tools-btn" data-toggle="modal" data-target="#tijiao">提交</span>
+                        </span>
+                    </div>
+                    <div class="heton-container">
+                        <table class="heton" border="0">
+                            <tbody>
+                                <tr>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>合同编号</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" id="only" data-toggle="important" data-target="input">
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>合同签订日期</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" data-target="input" class="form_datetime" readonly>
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>项目名称</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="绿能宝大庆项目" data-target="input">
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>项目类别</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" data-target="input">
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>技术协议签订时间</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" data-target="input" class="form_datetime" readonly>
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>并网时间</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" data-target="input" class="form_datetime" readonly>
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>总金额</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" class="allMon isNum" data-target="input">
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>质保金</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" data-target="input">
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                </tr>
+                                 <tr>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>币种</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <select name="" id="sele" style="height:30px;width:73%;border:1" data-target="input">
+                                              <option value=""></option>
+                                              <option value="">人民币</option>
+                                              <option value="">美元</option>
+                                        </select>
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>付款条件</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" data-target="input">
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>支付方式</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <select name=""  style="height:30px;width:73%;border:1" data-target="input">
+                                              <option value=""></option>
+                                              <option value="">电汇</option>
+                                              <option value="">承兑</option>
+                                              <option value="">电汇和承兑</option>
+                                        </select>
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>税率</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <select name=""  style="height:30px;width:73%;border:1" data-target="input">
+                                              <option value=""></option>
+                                              <option value="">17%</option>
+                                              <option value="">6%</option>
+                                        </select>
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>合同变更情况</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2" colspan="3">
+                                        <input type="text" value="">
+                                    </td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+<!--                采购相关信息-->
+                    <div class="purchase-infor">
+                        采购相关信息
+                    </div>
+                    <div class="purchase-container">
+                         <table class="purchase" border="0">
+                            <tbody>
+                                <tr>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>采购单位</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <select name=""  style="height:30px;width:73%;border:1" data-target="input">
+                                              <option value=""></option>
+                                              <option value="">新维智能电力（苏州）有限公司</option>
+                                              <option value="">新维太阳能电力工程（苏州）有限公司</option>
+                                              <option value="">新余新维新能源有限公司</option>
+                                        </select>
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>供应单位</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" data-target="input">
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                </tr>
+                            
+                                 <tr>
+                                      <td colspan="4" >
+                                          <table class="inner-table" border="1">
+                                                <thead>
+                                                    <tr>
+                                                        <th >序号</th>
+                                                        <th >标的物名称</th>
+                                                        <th >规格</th>
+                                                        <th >数量</th>
+                                                        <th >单位</th>
+                                                        <th >单价</th>
+                                                        <th >总金额</th>
+                                                        <th >操作</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody id="addTab">
+                                                   
+                                                </tbody>
+                                              
+                                          </table>
+
+                                            <div class="addTr" id="addTr">
+                                                <i class="iconfont icon-tianjia popover-hide"  title="添加一行" data-container="body" data-toggle="popover" data-placement="top"></i>
+                                            </div>
+                                      </td>
+                                </tr>
+                               
+                            </tbody>
+                        </table>
+                        
+                    </div>
+<!--                   付款相关信息 -->
+                    <div class="pay-infor">
+                        付款信息
+                    </div>
+                    <div class="pay-container">
+                        <table class="fukuan" border="1">
+                            <thead>
+                                <tr class="th_title">
+                                    <th >付款内容</th>
+                                    <th >百分比(%)</th>
+                                    <th >付款申请时间</th>
+                                    <th >申请金额</th>
+                                    <th >是否已付</th>
+                                    <th >实际付款时间</th>
+                                    <th >实际付款金额</th>
+                                    <th >付款方式</th>
+                                    <th >备注</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="tr_item">
+                                    <td>
+                                        <input type="text" value="预付款">
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" class="percent">
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" class="form_datetime" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" class="preMon" readonly >
+                                    </td>
+                                    <td>
+                                        <span class="payed">确认</span>
+                                        <span class="yizhifu">已支付</span>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" class="changeTime" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="0" class="trueMon" readonly>
+                                    </td>
+                                    
+                                    <td>
+                                        <input type="text" class="controlInp" readonly value="">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="controlInp" readonly value="">
+                                    </td>                                    
+                                </tr>
+                                <tr class="tr_item">
+                                    <td>
+                                        <input type="text" value="到货款">
+                                    </td>
+                                   <td>
+                                        <input type="text" value="" class="percent">
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" class="form_datetime" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" class="preMon" readonly >
+                                    </td>
+                                    <td>
+                                        <span class="payed">确认</span>
+                                        <span class="yizhifu">已支付</span>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" class="changeTime" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="0" class="trueMon" readonly >
+                                    </td>
+                                    
+                                    <td>
+                                        <input type="text" class="controlInp"  readonly value="">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="controlInp"  readonly value="">
+                                    </td>
+                                   
+                                </tr>
+                                <tr class="tr_item">
+                                    <td>
+                                        <input type="text" value="账期款">
+                                    </td>
+                                   <td>
+                                        <input type="text" value="" class="percent">
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" class="form_datetime" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" class="preMon" readonly >
+                                    </td>
+                                    <td>
+                                        <span class="payed">确认</span>
+                                        <span class="yizhifu">已支付</span>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" class="changeTime" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="0" class="trueMon" readonly >
+                                    </td>
+                                    
+                                    <td>
+                                        <input type="text" class="controlInp"  readonly value="">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="controlInp"  readonly value="">
+                                    </td>
+                                   
+                                </tr>
+                                <tr class="tr_item">
+                                    <td>
+                                        <input type="text" value="质保金">
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" class="percent">
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" class="form_datetime" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" class="preMon" readonly >
+                                    </td>
+                                    <td>
+                                        <span class="payed">确认</span>
+                                        <span class="yizhifu">已支付</span>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="" class="changeTime" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" value="0" class="trueMon" readonly >
+                                    </td>
+                                    
+                                    <td>
+                                        <input type="text" class="controlInp"  readonly value="">
+                                    </td>
+                                    <td>
+                                        <input type="text" class="controlInp"  readonly value="">
+                                    </td>
+                                    
+                                </tr>
+                                <tr class="tr_item">
+                                    <td colspan="8">
+                                        <input type="text" value="已付合计：" style="text-align:right" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" class='overMon' value="0" readonly>
+                                    </td>
+                                </tr>
+                                <tr class="tr_item">
+                                    <td colspan="8">
+                                        <input type="text" value="未付合计：" style="text-align:right;color:#f00" readonly>
+                                    </td>
+                                    <td>
+                                        <input type="text" class='nonMon' value="0" style="color:#f00" readonly>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+<!--                    发货信息-->
+                   <div class="fahuo-infor">
+                        发货信息
+                    </div>
+                    <div class="fahuo-container">
+                        <table class="fahuo" border="0">
+                            <tbody>
+                                <tr>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>发货时间</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" data-target="input" class="form_datetime" readonly>
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>到货时间</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" data-target="input" class="form_datetime" readonly>
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>运输方式</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" data-target="input">
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+<!--               发票信息-->
+                   <div class="fapiao-infor">
+                        发票信息
+                    </div>
+                    <div class="fapiao-container">
+                        <table class="fapiao" border="0">
+                            <tbody>
+                                <tr>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>发票时间</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" data-target="input" class="form_datetime" readonly>
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>发票号码</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" data-target="input">
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="col-1">
+                                        <div>
+                                            <span>发票金额</span>
+                                        </div>
+                                    </td>
+                                    <td class="col-2">
+                                        <input type="text" value="" class='isNum' data-target="input">
+                                        <span data-show="bitian" class="mustBe">*必填</span>
+                                    </td>
+                                    
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="purchase-order">
+                        采购申请单上传
+                    </div>
+                    <div class="upload-purchase" style="height:100px">                      
+                        <div id="uploader" class="wu-example">
+                            <!--用来存放文件信息-->
+                            <div id="thelist" class="uploader-list"></div>
+                            <div class="btns">
+                                <div id="picker">选择文件</div>
+                                <button id="ctlBtn" class="btn btn-default">开始上传</button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="technologe-document">
+                        技术协议上传
+                    </div>
+                    <div class="upload-technologe" style="height:100px">
+                        <button>选择文件</button>
+                        <button>上传</button>
+                    </div>
+                </div> <!--infor-->
+               </form>
+<!--               审批记录部分-->
+               <div id="record-container">
+                
+               </div>
+<!--               审批记录明细-->
+                <div class="footer" id="footer">
+                
+                </div>
+
+   <!-- 提交模态框（Modal） -->
+           <div class="modal fade bs-example-modal-sm" id="tijiao" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-sm">
+                    <div class="modal-content model-radius" >
+                        <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+                                &times;
+                            </button>
+                            <h4 class="modal-title" id="myModalLabel">提交确认</h4>
+                        </div>
+                        <div class="modal-body">
+                            <p>提交前，请确认必填项都已填完整</p>
+                            <p>确定提交吗?</p>
+                        </div>
+                        <div class="modal-footer">
+                            <span class="cancle" data-dismiss="modal">取消</span>
+                            <span class="sure">确定</span>
+                        </div>
+                    </div><!-- /.modal-content -->
+                </div><!-- /.modal -->
+            </div>
+            
+    <script type="text/javascript" src="../static/js/timepicker.js"></script>
+    </body>
+</html>

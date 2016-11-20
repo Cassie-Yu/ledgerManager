@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <title>ledgerManage</title>
+<!--        bootstrap框架-->
+        <link rel="stylesheet" type="text/css" href="../static/libs/bootstrap/bootstrap.min.css">
+<!--        阿里图标-->
+        <link rel="stylesheet" type="text/css" href="../static/libs/iconfont/iconfont.css">
+<!--        bootstrap时间选择器框架的样式-->
+        <link rel="stylesheet" type="text/css" href="../static/libs/bootstrap/bootstrap-datepicker.min.css">
+<!--        文件上传的样式-->
+        <link rel="stylesheet" type="text/css" href="../static/libs/webuploader/webuploader.css">
+<!--        base页面自定义样式-->
+        <link rel="stylesheet" type="text/css" href="../static/css/base.css">
+        <link rel="stylesheet" type="text/css" href="../static/css/base.less">
+        
+    </head>
+    <body>
+        <div class="logo-title">
+            <div class="logo">
+                <span class="iconfont icon-taizhang"></span>  &nbsp;&nbsp;|&nbsp;&nbsp;  台账系统
+            </div>
+            
+            <div class="user" >                    
+                    <div class="user-msg">
+                        <p class="ip-tip">
+                            <span class="user-infor">王小明</span>
+                            <span class="ip"> , 您好 !</span>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <span class=" iconfont icon-suo" title="修改<br>密码"  data-placement="bottom"  data-toggle="modal" data-target="#modify-password"></span>
+                            <span class="caozuo" id="password" data-toggle="modal" data-target="#modify-password">修改密码</span>&nbsp;&nbsp;|&nbsp;&nbsp;
+                            <span class="iconfont icon-tuichu" title="退出" data-toggle="tooltip" data-placement="bottom" for="exit"></span>
+                            <span class="caozuo" id="exit">退出</span>
+                        </p>
+                        <p class="ip-msg">
+                            <span class="user-infor">登录时间 : </span><span id="time"> 2012-12-02-02 12:12:12</span>
+                        </p>
+                        <p class="ip-msg">
+                            <span class="user-infor">当前所在IP : </span><span id="ip"> //http://127.10.1.0.22</span>
+                        </p>
+                    </div>
+
+            </div>
+     
+        </div>
+        <div class="menu">
+          <div class="index">
+                <ul class="wrapper">
+                    <li data-target="menu">
+                        <a href="javascript:void(0)"  data-show="tijiao">
+                            <span class="iconfont icon-cai"></span>采购管理
+                        </a>
+                        <div class="inner-menu">
+                            <dd data-show="add">台账添加</dd>
+                            <dd data-show="item">台账列表</dd>
+                            <dd data-show="edit">台账管理</dd>
+                            <dd>菜单一</dd>
+                            <dd>菜单一</dd>
+                            <dd>菜单一</dd>
+                            <dd>菜单一</dd>
+                        </div>
+                    </li>
+                    <li data-target="menu">
+                        <a href="javascript:void(0)"   data-show="shenhe" >
+                            <span class="iconfont icon-shenpi"></span>项目管理
+                        </a>
+                        <div class="inner-menu" >
+                            <dd>菜单二</dd>
+                            <dd>菜单二</dd>
+                            <dd>菜单二</dd>
+                            <dd>菜单二</dd>
+                            <dd>菜单二</dd>
+                            <dd>菜单二</dd>
+                            <dd>菜单二</dd>
+                        </div>
+                    </li>
+                    <li  data-target="menu">
+                        <a href="javascript:void(0)"  >
+                            <span class="iconfont icon-xiangmu"></span>物资管理
+                        </a>
+                        <div class="inner-menu">
+                            <dd>菜单三</dd>
+                            <dd>菜单三</dd>
+                            <dd>菜单三</dd>
+                            <dd>菜单三</dd>
+                            <dd>菜单三</dd>
+                            <dd>菜单三</dd>
+                            <dd>菜单三</dd>
+                        </div>
+                    </li>
+                    <li data-target="menu">
+                        <a href="javascript:void(0)"  >
+                            <span class="iconfont icon-shebeiyunwei"></span>运维管理
+                        </a>
+                        <div class="inner-menu">
+                            <dd>菜单四</dd>
+                            <dd>菜单四</dd>
+                            <dd>菜单四</dd>
+                            <dd>菜单四</dd>
+                            <dd>菜单四</dd>
+                            <dd>菜单四</dd>
+                            <dd>菜单四</dd>
+                        </div>
+                    </li>
+                    <li data-target="menu">
+                        <a href="javascript:void(0)" >
+                            <span class="iconfont icon-gongchengguanli"></span>工程管理
+                        </a>
+                        <div class="inner-menu">
+                            <dd>菜单五</dd>
+                            <dd>菜单五</dd>
+                            <dd>菜单五</dd>
+                            <dd>菜单五</dd>
+                            <dd>菜单五</dd>
+                            <dd>菜单五</dd>
+                            <dd>菜单五</dd>
+                        </div>
+                    </li>
+                    <li data-target="menu">
+                        <a href="javascript:void(0)"  >
+                            <span class="iconfont icon-caiwu"></span>财务管理
+                        </a>
+                        <div class="inner-menu">
+                            <dd>菜单六</dd>
+                            <dd>菜单六</dd>
+                            <dd>菜单六</dd>
+                            <dd>菜单六</dd>
+                            <dd>菜单六</dd>
+                            <dd>菜单六</dd>
+                            <dd>菜单六</dd>
+                        </div>
+                    </li>
+                </ul>
+              
+          </div>
+           
+            
+        </div>
+        <div class="main-container" id="main_container">
+
+        </div>
+<!--        修改密码模态框-->
+    <div class="modal fade " id="modify-password" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="model-content">
+                <form data-form-valid="valid"  id="reset-password"  name="reset-password" action="javascript：void(0)">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close" id="close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                        <h4 class="modal-title" id="myModalLabel">修改密码</h4>
+                    </div>
+                    <div class="modal-body model-container">
+                     
+                        <div class="infor-row">
+                            <div class="col-md-3 input-label-infor">
+                                <lable class="input-lable">原始密码</lable>
+                            </div>
+                            <div class="col-md-8 input-password">
+                                <input type="password" class="password" name="oldPassword" id="oldPassword"  />
+                            </div>
+                            <div class="col-md-8 col-md-offset-3 ">
+                                <span class="input-msg"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="infor-row">
+                            <div class="col-md-3 input-label-infor">
+                                <lable class="input-lable">新密码</lable>
+                            </div>
+                            <div class="col-md-8 ">
+                                <input type="password" class="password" name="newPassword" id="newPassword" />
+                            </div>
+                            <div class="col-md-8 col-md-offset-3">
+                                <span class="input-msg"></span>
+                            </div>
+                        </div>
+                        
+                        <div class="infor-row">
+                            <div class="col-md-3 input-label-infor">
+                                <lable class="input-lable">确认密码</lable>
+                            </div>
+                            <div class="col-md-8 ">
+                                <input type="password" class="password" name="confirmPassword" id="confirmPassword" />
+                            </div>
+                            <div class="col-md-9  col-md-offset-3">
+                                <span class="input-msg"></span>
+                            </div>
+                        </div>
+                        
+                    </div>
+
+                    <div class="modal-footer">
+                        <span class="submitted"  type="submit" data-form-valid='submit' data-dismiss="modal" >
+                            提交
+                        </span>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+<!--        修改密码模态框-->
+                                   
+    <!--     jquery文件引入-->
+    <script type="text/javascript" src="../static/libs/jquery/jquery.min.js"></script>
+
+    <!--     bootstrap文件引入-->
+    <script type="text/javascript" src="../static/libs/bootstrap/bootstrap.min.js"></script>
+
+    <!--    bootstrap时间选择区文件引入-->
+    <script type="text/javascript" src="../static/libs/bootstrap/bootstrap-datepicker.min.js"></script>
+    <!--    时间选择器的国际化,js设置-->
+    <script type="text/javascript" src="../static/libs/bootstrap/bootstrap-datepicker-zh.js"></script>   
+    <!--     文件上传插件的引入-->
+    <script type="text/javascript" src="../static/libs/webuploader/webuploader.js"></script>
+    <!--表单验证文件  -->
+    <script type="text/javascript" src="../static/libs/jquery_validation/jquery.validate.min.js"></script>
+
+
+    <!--    加载各个模块页面的js-->
+    <script type="text/javascript" src="../static/js/addhtml.js"></script>
+    <!--    首页内部js代码-->
+    <script type="text/javascript" src="../static/js/base.js"></script>
+    <!--    台账添加页面内部js代码-->
+    <script type="text/javascript" src="../static/js/ledgerAdd.js"></script>
+    <!--    台账管理页面内部js代码-->
+    <script type="text/javascript" src="../static/js/ledgerEdit.js"></script>
+
+    <!-- 页面中所有的表单验证-->
+    <script type="text/javascript" src="../static/js/validate.js"></script>
+
+    <!-- 鼠标移入提示框展示 -->
+    <script type="text/javascript">
+        $(function () {
+            //tooltip提示
+            $("[data-toggle='tooltip']").tooltip(); 
+            $("[data-target='shenpi-record']").tooltip({html:true}); 
+            $("[data-target='#modify-password']").tooltip({html:true}); 
+        });
+    </script>
+ 
+
+    </body>
+</html>
