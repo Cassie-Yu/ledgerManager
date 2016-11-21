@@ -88,11 +88,16 @@
                                     </td>
                                     <td class="col-1">
                                         <div>
-                                            <span>质保金</span>
+                                            <span>支付方式</span>
                                         </div>
                                     </td>
                                     <td class="col-2">
-                                        <input type="text" value="" data-target="input">
+                                        <select name=""  style="height:30px;width:73%;border:1" data-target="input">
+                                              <option value=""></option>
+                                              <option value="">电汇</option>
+                                              <option value="">承兑</option>
+                                              <option value="">电汇和承兑</option>
+                                        </select>
                                         <span data-show="bitian" class="mustBe">*必填</span>
                                     </td>
                                 </tr>
@@ -107,31 +112,6 @@
                                               <option value=""></option>
                                               <option value="">人民币</option>
                                               <option value="">美元</option>
-                                        </select>
-                                        <span data-show="bitian" class="mustBe">*必填</span>
-                                    </td>
-                                    <td class="col-1">
-                                        <div>
-                                            <span>付款条件</span>
-                                        </div>
-                                    </td>
-                                    <td class="col-2">
-                                        <input type="text" value="" data-target="input">
-                                        <span data-show="bitian" class="mustBe">*必填</span>
-                                    </td>
-                                </tr>
-                                <tr>
-                                    <td class="col-1">
-                                        <div>
-                                            <span>支付方式</span>
-                                        </div>
-                                    </td>
-                                    <td class="col-2">
-                                        <select name=""  style="height:30px;width:73%;border:1" data-target="input">
-                                              <option value=""></option>
-                                              <option value="">电汇</option>
-                                              <option value="">承兑</option>
-                                              <option value="">电汇和承兑</option>
                                         </select>
                                         <span data-show="bitian" class="mustBe">*必填</span>
                                     </td>
@@ -155,8 +135,8 @@
                                             <span>合同变更情况</span>
                                         </div>
                                     </td>
-                                    <td class="col-2" colspan="3">
-                                        <input type="text" value="">
+                                    <td class="col-3">
+                                        <textarea class="textArea" cols="10" rows="4" style="resize:none"></textarea>
                                     </td>
                                     
                                 </tr>
@@ -480,22 +460,22 @@
                     <div class="purchase-order">
                         采购申请单上传
                     </div>
-                    <div class="upload-purchase" style="height:100px">                      
-                        <div id="uploader" class="wu-example">
-                            <!--用来存放文件信息-->
-                            <div id="thelist" class="uploader-list"></div>
-                            <div class="btns">
-                                <div id="picker">选择文件</div>
-                                <button id="ctlBtn" class="btn btn-default">开始上传</button>
-                            </div>
-                        </div>
+                    <div class="upload-purchase">                      
+                        <a href="javascript:void(0)" class="downFile">采购申请单①</a>
                     </div>
                     <div class="technologe-document">
                         技术协议上传
                     </div>
-                    <div class="upload-technologe" style="height:100px">
-                        <button>选择文件</button>
-                        <button>上传</button>
+                    <div class="upload-technologe">
+                        <iframe name="fileUpload" style="display: none;"></iframe>
+						<form method="post" action="./purchase/upload" enctype="multipart/form-data" name="fileForm" target="fileUpload">
+                            <a href="javascript:void(0)" class="file">选择文件
+                                <input type="file" class="fileInput" name="fileInput">
+                            </a>
+                            <a href="javascript:void(0)" class="file">提交
+    						    <input type="submit" class="submitbtn" value="提交" />
+                            </a>
+						</form>
                     </div>
                 </div> <!--infor-->
                </form>

@@ -26,12 +26,38 @@ ledgerAdd.submit = function(){
                if($.trim($(inputVal[i]).val())==""){                
                 $(inputVal[i]).next().css("display","inline-block");
                 $(inputVal[i]).css("border"," 1px solid red");                
-            }else{                
+            }else{                 
                  $(inputVal[i]).next().css("display","none");                
                  $(inputVal[i]).css("border"," 1px solid #ccc");                
               }
             }
         }
+        $(document).on('change','input,select',function(){
+            var inputVal=$("[data-target='input']");               
+            for(var i=0;i<inputVal.length;i++){
+                //判断是否为select
+                if($(inputVal[i]).is("select")){
+                //获取select里的值
+                    var eVal = $(inputVal[i]).children('option:selected').text();                
+                    if(eVal==""){                    
+                       $(inputVal[i]).next().css("display","inline-block");                   
+                       $(inputVal[i]).css("border"," 1px solid red");                    
+                    }else{                    
+                       $(inputVal[i]).next().css("display","none");                    
+                       $(inputVal[i]).css("border"," 1px solid #ccc"); 
+                    }
+                //判断为input的情况
+                }else if($(inputVal[i]).is("input")){                 
+                   if($.trim($(inputVal[i]).val())==""){                
+                    $(inputVal[i]).next().css("display","inline-block");
+                    $(inputVal[i]).css("border"," 1px solid red");                
+                }else{                 
+                     $(inputVal[i]).next().css("display","none");                
+                     $(inputVal[i]).css("border"," 1px solid #ccc");                
+                  }
+                }
+            }
+        });
     });
 }
 

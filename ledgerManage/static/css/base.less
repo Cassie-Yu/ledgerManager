@@ -233,6 +233,9 @@ input{
                       }
                 }
             }
+            .textArea{
+                width:100%;
+            }
         } 
         .purchase-infor{
             height: 30px;
@@ -453,6 +456,45 @@ input{
                 border-bottom: 1px solid #ccc;
                 color: #22559f;
                 margin-top: 20px;
+            }
+            .upload-purchase,.upload-technologe{
+                height:inherit;
+                .file{
+                    position: relative;
+                    display: inline-block;
+                    background: #0d6ed5;
+                    margin-top:10px;
+                    border-radius: 5px;
+                    padding: 4px 12px;
+                    overflow: hidden;
+                    color: #fff;
+                    text-decoration: none;
+                    text-indent: 0;
+                    line-height: 20px;
+                }
+                .downFile{ 
+                    display:table;
+                    height:30px;
+                    padding:0 5px;
+                    line-height:30px;
+                    text-decoration:none;
+                    color:#000;
+                    border-bottom:1px solid #eff5ff;
+                    &:hover{
+                        border-bottom:1px solid #ccc;
+                    }
+                }
+                .fileInput,.submitbtn{
+                    position: absolute;
+                    font-size: 100px;
+                    right: 0;
+                    top: 0;
+                    opacity: 0;
+                    &:hover{
+                        background: #67a4e6;
+                        text-decoration: none;
+                    }
+                }
             }
             .technologe-document{
                 height: 30px;
