@@ -10,6 +10,7 @@ input {
 }
 .logo-title {
   width: 100%;
+  min-width:1290px;
   height: 80px;
   background: #22559f;
   color: #fff;
@@ -87,6 +88,7 @@ input {
 }
 .menu {
   width: 100%;
+  min-width:1290px;
   height: 30px;
   background: #0d6ed5;
   line-height: 30px;
@@ -171,14 +173,16 @@ input {
 }
 .main-container {
   width: 100%;
+  min-width:1250px;
   position: absolute;
-  margin: 20px auto  ;
+  margin: 20px auto;
   padding-right: 20px;
   /*infor*/
   /*footer*/
 }
 .main-container .infor {
   width: 75%;
+  min-width:1250px;
   margin: 0 auto;
 }
 .main-container .infor .heton-infor {
@@ -300,59 +304,128 @@ input {
   display: block;
   color: #fff;
   width: 50px;
-  height: 20px;
+  height: 25px;
+  line-height: 25px;
   margin: 0 auto;
   text-align: -webkit-center;
   background: #0d6ed5;
   text-decoration: none;
   cursor: pointer;
+  border-radius: 5px;
 }
-.main-container .infor .purchase-container .purchase .addTr {
-  width: 60px;
-  height: 15px;
+.main-container .infor .purchase-container .purchase .inner-table .delCancel {
+  display: block;
+  color: #fff;
+  width: 50px;
+  height: 25px;
+  line-height: 25px;
   margin: 0 auto;
-  text-align: center;
-  border: 1px solid #ccc;
-  border-top: 0px;
-  border-bottom-left-radius: 30%;
-  border-bottom-right-radius: 30%;
+  text-align: -webkit-center;
+  background: #ccc;
+  text-decoration: none;
   cursor: pointer;
+  border-radius: 5px;
 }
-.main-container .infor .purchase-container .purchase .addTr i {
-  position: relative;
-  top: -5px;
-}
-.main-container .infor .pay-infor {
+.main-container .infor .pay-infor,
+.main-container .infor .progress-infor {
   height: 30px;
   line-height: 30px;
   border-bottom: 1px solid #ccc;
   color: #22559f;
   margin-top: 20px;
 }
-.main-container .infor .pay-container {
+.main-container .infor .pay-container,
+.main-container .infor .progress-container,
+.main-container .infor .actualpay-container {
   width: 100%;
   margin-top: 20px;
 }
-.main-container .infor .pay-container .fukuan {
+.main-container .infor .pay-container .fukuan,
+.main-container .infor .progress-container .fukuan,
+.main-container .infor .actualpay-container .fukuan,
+.main-container .infor .pay-container .Progress,
+.main-container .infor .progress-container .Progress,
+.main-container .infor .actualpay-container .Progress,
+.main-container .infor .pay-container .progressDescribe,
+.main-container .infor .progress-container .progressDescribe,
+.main-container .infor .actualpay-container .progressDescribe,
+.main-container .infor .pay-container .actualfukuan,
+.main-container .infor .progress-container .actualfukuan,
+.main-container .infor .actualpay-container .actualfukuan {
   width: 100%;
 }
-.main-container .infor .pay-container .fukuan .th_title {
+.main-container .infor .pay-container .fukuan .th_title,
+.main-container .infor .progress-container .fukuan .th_title,
+.main-container .infor .actualpay-container .fukuan .th_title,
+.main-container .infor .pay-container .Progress .th_title,
+.main-container .infor .progress-container .Progress .th_title,
+.main-container .infor .actualpay-container .Progress .th_title,
+.main-container .infor .pay-container .progressDescribe .th_title,
+.main-container .infor .progress-container .progressDescribe .th_title,
+.main-container .infor .actualpay-container .progressDescribe .th_title,
+.main-container .infor .pay-container .actualfukuan .th_title,
+.main-container .infor .progress-container .actualfukuan .th_title,
+.main-container .infor .actualpay-container .actualfukuan .th_title {
   height: 30px;
   width: 10%;
 }
-.main-container .infor .pay-container .fukuan .th_title th {
+.main-container .infor .pay-container .fukuan .th_title th,
+.main-container .infor .progress-container .fukuan .th_title th,
+.main-container .infor .actualpay-container .fukuan .th_title th,
+.main-container .infor .pay-container .Progress .th_title th,
+.main-container .infor .progress-container .Progress .th_title th,
+.main-container .infor .actualpay-container .Progress .th_title th,
+.main-container .infor .pay-container .progressDescribe .th_title th,
+.main-container .infor .progress-container .progressDescribe .th_title th,
+.main-container .infor .actualpay-container .progressDescribe .th_title th,
+.main-container .infor .pay-container .actualfukuan .th_title th,
+.main-container .infor .progress-container .actualfukuan .th_title th,
+.main-container .infor .actualpay-container .actualfukuan .th_title th {
   text-align: center;
   border: 1px solid #ccc;
 }
-.main-container .infor .pay-container .fukuan .tr_item {
+.main-container .infor .pay-container .fukuan .tr_item,
+.main-container .infor .progress-container .fukuan .tr_item,
+.main-container .infor .actualpay-container .fukuan .tr_item,
+.main-container .infor .pay-container .Progress .tr_item,
+.main-container .infor .progress-container .Progress .tr_item,
+.main-container .infor .actualpay-container .Progress .tr_item,
+.main-container .infor .pay-container .progressDescribe .tr_item,
+.main-container .infor .progress-container .progressDescribe .tr_item,
+.main-container .infor .actualpay-container .progressDescribe .tr_item,
+.main-container .infor .pay-container .actualfukuan .tr_item,
+.main-container .infor .progress-container .actualfukuan .tr_item,
+.main-container .infor .actualpay-container .actualfukuan .tr_item {
   width: 100%;
 }
-.main-container .infor .pay-container .fukuan .tr_item td {
+.main-container .infor .pay-container .fukuan .tr_item td,
+.main-container .infor .progress-container .fukuan .tr_item td,
+.main-container .infor .actualpay-container .fukuan .tr_item td,
+.main-container .infor .pay-container .Progress .tr_item td,
+.main-container .infor .progress-container .Progress .tr_item td,
+.main-container .infor .actualpay-container .Progress .tr_item td,
+.main-container .infor .pay-container .progressDescribe .tr_item td,
+.main-container .infor .progress-container .progressDescribe .tr_item td,
+.main-container .infor .actualpay-container .progressDescribe .tr_item td,
+.main-container .infor .pay-container .actualfukuan .tr_item td,
+.main-container .infor .progress-container .actualfukuan .tr_item td,
+.main-container .infor .actualpay-container .actualfukuan .tr_item td {
   border: 1px solid #ccc;
   text-align: center;
   background: #fff;
 }
-.main-container .infor .pay-container .fukuan .tr_item td .payed {
+.main-container .infor .pay-container .fukuan .tr_item td .payed,
+.main-container .infor .progress-container .fukuan .tr_item td .payed,
+.main-container .infor .actualpay-container .fukuan .tr_item td .payed,
+.main-container .infor .pay-container .Progress .tr_item td .payed,
+.main-container .infor .progress-container .Progress .tr_item td .payed,
+.main-container .infor .actualpay-container .Progress .tr_item td .payed,
+.main-container .infor .pay-container .progressDescribe .tr_item td .payed,
+.main-container .infor .progress-container .progressDescribe .tr_item td .payed,
+.main-container .infor .actualpay-container .progressDescribe .tr_item td .payed,
+.main-container .infor .pay-container .actualfukuan .tr_item td .payed,
+.main-container .infor .progress-container .actualfukuan .tr_item td .payed,
+.main-container .infor .actualpay-container .actualfukuan .tr_item td .payed {
   display: inline-block;
   width: 50px;
   height: 25px;
@@ -364,7 +437,41 @@ input {
   cursor: pointer;
   border-radius: 5px;
 }
-.main-container .infor .pay-container .fukuan .tr_item td .yizhifu {
+.main-container .infor .pay-container .fukuan .tr_item td .del,
+.main-container .infor .progress-container .fukuan .tr_item td .del,
+.main-container .infor .actualpay-container .fukuan .tr_item td .del,
+.main-container .infor .pay-container .Progress .tr_item td .del,
+.main-container .infor .progress-container .Progress .tr_item td .del,
+.main-container .infor .actualpay-container .Progress .tr_item td .del,
+.main-container .infor .pay-container .progressDescribe .tr_item td .del,
+.main-container .infor .progress-container .progressDescribe .tr_item td .del,
+.main-container .infor .actualpay-container .progressDescribe .tr_item td .del,
+.main-container .infor .pay-container .actualfukuan .tr_item td .del,
+.main-container .infor .progress-container .actualfukuan .tr_item td .del,
+.main-container .infor .actualpay-container .actualfukuan .tr_item td .del {
+  display: inline-block;
+  width: 50px;
+  height: 25px;
+  line-height: 25px;
+  background-color: #0d6ed5;
+  color: #fff;
+  margin: 0 2px;
+  padding: 0 10px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+.main-container .infor .pay-container .fukuan .tr_item td .yizhifu,
+.main-container .infor .progress-container .fukuan .tr_item td .yizhifu,
+.main-container .infor .actualpay-container .fukuan .tr_item td .yizhifu,
+.main-container .infor .pay-container .Progress .tr_item td .yizhifu,
+.main-container .infor .progress-container .Progress .tr_item td .yizhifu,
+.main-container .infor .actualpay-container .Progress .tr_item td .yizhifu,
+.main-container .infor .pay-container .progressDescribe .tr_item td .yizhifu,
+.main-container .infor .progress-container .progressDescribe .tr_item td .yizhifu,
+.main-container .infor .actualpay-container .progressDescribe .tr_item td .yizhifu,
+.main-container .infor .pay-container .actualfukuan .tr_item td .yizhifu,
+.main-container .infor .progress-container .actualfukuan .tr_item td .yizhifu,
+.main-container .infor .actualpay-container .actualfukuan .tr_item td .yizhifu {
   width: 50px;
   height: 25px;
   line-height: 25px;
@@ -375,11 +482,124 @@ input {
   margin: 0 2px;
   border-radius: 5px;
 }
-.main-container .infor .pay-container .fukuan .tr_item td input {
+.main-container .infor .pay-container .fukuan .tr_item td input,
+.main-container .infor .progress-container .fukuan .tr_item td input,
+.main-container .infor .actualpay-container .fukuan .tr_item td input,
+.main-container .infor .pay-container .Progress .tr_item td input,
+.main-container .infor .progress-container .Progress .tr_item td input,
+.main-container .infor .actualpay-container .Progress .tr_item td input,
+.main-container .infor .pay-container .progressDescribe .tr_item td input,
+.main-container .infor .progress-container .progressDescribe .tr_item td input,
+.main-container .infor .actualpay-container .progressDescribe .tr_item td input,
+.main-container .infor .pay-container .actualfukuan .tr_item td input,
+.main-container .infor .progress-container .actualfukuan .tr_item td input,
+.main-container .infor .actualpay-container .actualfukuan .tr_item td input {
   width: 100%;
   height: 30px;
   outline: none;
   border: 0;
+  text-align: center;
+}
+.main-container .infor .pay-container .fukuan .tr_item td .actualfukuanContent,
+.main-container .infor .progress-container .fukuan .tr_item td .actualfukuanContent,
+.main-container .infor .actualpay-container .fukuan .tr_item td .actualfukuanContent,
+.main-container .infor .pay-container .Progress .tr_item td .actualfukuanContent,
+.main-container .infor .progress-container .Progress .tr_item td .actualfukuanContent,
+.main-container .infor .actualpay-container .Progress .tr_item td .actualfukuanContent,
+.main-container .infor .pay-container .progressDescribe .tr_item td .actualfukuanContent,
+.main-container .infor .progress-container .progressDescribe .tr_item td .actualfukuanContent,
+.main-container .infor .actualpay-container .progressDescribe .tr_item td .actualfukuanContent,
+.main-container .infor .pay-container .actualfukuan .tr_item td .actualfukuanContent,
+.main-container .infor .progress-container .actualfukuan .tr_item td .actualfukuanContent,
+.main-container .infor .actualpay-container .actualfukuan .tr_item td .actualfukuanContent,
+.main-container .infor .pay-container .fukuan .tr_item td .actualfukuanMethod,
+.main-container .infor .progress-container .fukuan .tr_item td .actualfukuanMethod,
+.main-container .infor .actualpay-container .fukuan .tr_item td .actualfukuanMethod,
+.main-container .infor .pay-container .Progress .tr_item td .actualfukuanMethod,
+.main-container .infor .progress-container .Progress .tr_item td .actualfukuanMethod,
+.main-container .infor .actualpay-container .Progress .tr_item td .actualfukuanMethod,
+.main-container .infor .pay-container .progressDescribe .tr_item td .actualfukuanMethod,
+.main-container .infor .progress-container .progressDescribe .tr_item td .actualfukuanMethod,
+.main-container .infor .actualpay-container .progressDescribe .tr_item td .actualfukuanMethod,
+.main-container .infor .pay-container .actualfukuan .tr_item td .actualfukuanMethod,
+.main-container .infor .progress-container .actualfukuan .tr_item td .actualfukuanMethod,
+.main-container .infor .actualpay-container .actualfukuan .tr_item td .actualfukuanMethod {
+  width: 100%;
+  border: none;
+  height: 100%;
+}
+.main-container .infor .pay-container .fukuan .des,
+.main-container .infor .progress-container .fukuan .des,
+.main-container .infor .actualpay-container .fukuan .des,
+.main-container .infor .pay-container .Progress .des,
+.main-container .infor .progress-container .Progress .des,
+.main-container .infor .actualpay-container .Progress .des,
+.main-container .infor .pay-container .progressDescribe .des,
+.main-container .infor .progress-container .progressDescribe .des,
+.main-container .infor .actualpay-container .progressDescribe .des,
+.main-container .infor .pay-container .actualfukuan .des,
+.main-container .infor .progress-container .actualfukuan .des,
+.main-container .infor .actualpay-container .actualfukuan .des {
+  width: 10%;
+}
+.main-container .infor .pay-container .fukuan .areabox,
+.main-container .infor .progress-container .fukuan .areabox,
+.main-container .infor .actualpay-container .fukuan .areabox,
+.main-container .infor .pay-container .Progress .areabox,
+.main-container .infor .progress-container .Progress .areabox,
+.main-container .infor .actualpay-container .Progress .areabox,
+.main-container .infor .pay-container .progressDescribe .areabox,
+.main-container .infor .progress-container .progressDescribe .areabox,
+.main-container .infor .actualpay-container .progressDescribe .areabox,
+.main-container .infor .pay-container .actualfukuan .areabox,
+.main-container .infor .progress-container .actualfukuan .areabox,
+.main-container .infor .actualpay-container .actualfukuan .areabox {
+  width: 85%;
+}
+.main-container .infor .pay-container .fukuan .areabox .textArea,
+.main-container .infor .progress-container .fukuan .areabox .textArea,
+.main-container .infor .actualpay-container .fukuan .areabox .textArea,
+.main-container .infor .pay-container .Progress .areabox .textArea,
+.main-container .infor .progress-container .Progress .areabox .textArea,
+.main-container .infor .actualpay-container .Progress .areabox .textArea,
+.main-container .infor .pay-container .progressDescribe .areabox .textArea,
+.main-container .infor .progress-container .progressDescribe .areabox .textArea,
+.main-container .infor .actualpay-container .progressDescribe .areabox .textArea,
+.main-container .infor .pay-container .actualfukuan .areabox .textArea,
+.main-container .infor .progress-container .actualfukuan .areabox .textArea,
+.main-container .infor .actualpay-container .actualfukuan .areabox .textArea {
+  width: 100%;
+}
+.main-container .infor .pay-container .actualfukuan,
+.main-container .infor .progress-container .actualfukuan,
+.main-container .infor .actualpay-container .actualfukuan {
+  width: 100%;
+  border-color: #ccc;
+  margin-top: 20px;
+}
+.main-container .infor .pay-container .actualfukuan th,
+.main-container .infor .progress-container .actualfukuan th,
+.main-container .infor .actualpay-container .actualfukuan th,
+.main-container .infor .pay-container .actualfukuan td,
+.main-container .infor .progress-container .actualfukuan td,
+.main-container .infor .actualpay-container .actualfukuan td {
+  width: 10%;
+  height: 30px;
+  padding: 0;
+  text-align: center;
+  background-color: #fff;
+}
+.main-container .infor .pay-container .actualfukuan th input,
+.main-container .infor .progress-container .actualfukuan th input,
+.main-container .infor .actualpay-container .actualfukuan th input,
+.main-container .infor .pay-container .actualfukuan td input,
+.main-container .infor .progress-container .actualfukuan td input,
+.main-container .infor .actualpay-container .actualfukuan td input {
+  width: 100%;
+  height: 30px;
+  line-height: 30px;
+  border: none;
+  outline: none;
   text-align: center;
 }
 .main-container .infor .fahuo-infor {
@@ -452,34 +672,64 @@ input {
   color: red;
   display: none;
 }
-.main-container .infor .purchase-order {
+.main-container .infor .fileUpContainer {
+  min-width: 1250px;
+  height: inherit;
+  overflow: hidden;
+}
+.main-container .infor .fileUpLoad {
+  width: 230px;
+  margin-right: 10px;
+  float: left;
+}
+.main-container .infor .fileUpLoad .purchase-order,
+.main-container .infor .fileUpLoad .technologe-document {
+  width: 220px;
   height: 30px;
   line-height: 30px;
   border-bottom: 1px solid #ccc;
   color: #22559f;
   margin-top: 20px;
 }
-.main-container .infor .upload-purchase,
-.main-container .infor .upload-technologe {
+.main-container .infor .fileUpLoad .uploadContent {
+  width: 230px;
   height: inherit;
+  overflow: hidden;
 }
-.main-container .infor .upload-purchase .file,
-.main-container .infor .upload-technologe .file {
+.main-container .infor .fileUpLoad .uploadContent .file {
   position: relative;
   display: inline-block;
   background: #0d6ed5;
-  margin-top: 10px;
+  margin: 10px 2px 0 0;
   border-radius: 5px;
   padding: 4px 12px;
-  overflow: hidden;
   color: #fff;
   text-decoration: none;
   text-indent: 0;
   line-height: 20px;
+  max-width: 100px;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.main-container .infor .upload-purchase .downFile,
-.main-container .infor .upload-technologe .downFile {
-  display: table;
+.main-container .infor .fileUpLoad .uploadContent .fileInput,
+.main-container .infor .fileUpLoad .uploadContent .submitbtn {
+  position: absolute;
+  font-size: 100px;
+  right: 0;
+  top: 0;
+  opacity: 0;
+}
+.main-container .infor .fileUpLoad .uploadContent .fileInput:hover,
+.main-container .infor .fileUpLoad .uploadContent .submitbtn:hover {
+  background: #67a4e6;
+  text-decoration: none;
+}
+.main-container .infor .fileUpLoad .downLoadContent {
+  margin-top: 6px;
+}
+.main-container .infor .fileUpLoad .downLoadContent .downFile {
+  display: inline-block;
   height: 30px;
   padding: 0 5px;
   line-height: 30px;
@@ -487,33 +737,17 @@ input {
   color: #000;
   border-bottom: 1px solid #eff5ff;
 }
-.main-container .infor .upload-purchase .downFile:hover,
-.main-container .infor .upload-technologe .downFile:hover {
+.main-container .infor .fileUpLoad .downLoadContent .downFile:hover {
   border-bottom: 1px solid #ccc;
 }
-.main-container .infor .upload-purchase .fileInput,
-.main-container .infor .upload-technologe .fileInput,
-.main-container .infor .upload-purchase .submitbtn,
-.main-container .infor .upload-technologe .submitbtn {
-  position: absolute;
-  font-size: 100px;
-  right: 0;
-  top: 0;
-  opacity: 0;
-}
-.main-container .infor .upload-purchase .fileInput:hover,
-.main-container .infor .upload-technologe .fileInput:hover,
-.main-container .infor .upload-purchase .submitbtn:hover,
-.main-container .infor .upload-technologe .submitbtn:hover {
-  background: #67a4e6;
+.main-container .infor .fileUpLoad .downLoadContent .downBtn {
+  display: inline-block;
+  background-color: #0d6ed5;
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
   text-decoration: none;
-}
-.main-container .infor .technologe-document {
-  height: 30px;
-  line-height: 30px;
-  border-bottom: 1px solid #ccc;
-  color: #22559f;
-  margin-top: 20px;
 }
 .main-container .record {
   position: relative;
@@ -531,18 +765,6 @@ input {
   text-align: center;
   position: relative;
   top: -10px;
-  border-top-left-radius: 15%;
-  border-top-right-radius: 15%;
-}
-.main-container .record .fukuanrecord {
-  width: 100px;
-  height: 30px;
-  border: 1px solid #ccc;
-  line-height: 30px;
-  text-align: center;
-  position: relative;
-  top: -40px;
-  left: 110px;
   border-top-left-radius: 15%;
   border-top-right-radius: 15%;
 }
@@ -698,5 +920,22 @@ input {
 .main-container .pages-div {
   text-align: center;
   margin: 0 auto;
+}
+.main-container .addTr,
+.main-container .addTrTwo {
+  width: 60px;
+  height: 15px;
+  margin: 0 auto;
+  text-align: center;
+  border: 1px solid #ccc;
+  border-top: 0px;
+  border-bottom-left-radius: 30%;
+  border-bottom-right-radius: 30%;
+  cursor: pointer;
+}
+.main-container .addTr i,
+.main-container .addTrTwo i {
+  position: relative;
+  top: -5px;
 }
 /**********main-container**************/

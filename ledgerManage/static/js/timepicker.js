@@ -1,8 +1,8 @@
 var timepicker = new Object();
 //时间选择器js控制
+var iDay;
 
 timepicker.changed = function(){
-    var iDay;
     var yesterday;
     Date.prototype.Format = function(fmt) { // author: meizz
         var o = {

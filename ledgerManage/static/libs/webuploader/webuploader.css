@@ -6,23 +6,62 @@
 	clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
     clip: rect(1px,1px,1px,1px);
 }
-.webuploader-pick {
+.webuploader-pick,.ctlBtn{
 	position: relative;
 	display: inline-block;
 	cursor: pointer;
-	background: #00b7ee;
-	padding: 10px 15px;
+	background: #0d6ed5;
+	padding: 4px 12px;
 	color: #fff;
 	text-align: center;
-	border-radius: 3px;
+	border-radius: 5px;
 	overflow: hidden;
+    margin-top:10px;
 }
-.webuploader-pick-hover {
-	background: #00a2d4;
+.ctlBtn:hover{
+    color:#fff;
+    text-decoration:none;    
 }
 
 .webuploader-pick-disable {
 	opacity: 0.6;
 	pointer-events:none;
 }
+
+.item{
+    width:220px;
+    height:30px;
+    line-height:30px;
+    overflow:hidden;
+}
+
+.info{
+    display:inline-block;
+    width:130px;
+    height:30px;
+    line-height:30px;
+    overflow:hidden;
+    text-overflow:ellipsis;
+    float:left;
+}
+
+.state{
+   display:inline-block;
+    width:60px;
+    height:30px;
+    line-height:30px;
+    margin-top:-10px;
+    font-size:0.5em;
+    color:#c0c0c0;
+}
+
+.delete{
+    display:inline-block;
+    margin-left:10px;
+    width:15px;
+    height:30px;
+    color:#000;
+    cursor:pointer;
+}
+
 

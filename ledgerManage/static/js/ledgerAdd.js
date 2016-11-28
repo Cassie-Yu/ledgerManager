@@ -1,7 +1,8 @@
 $(function(){
-    ledgerAdd.submit();//点击提交按钮时出现的错误提示
-    ledgerAdd.purchasingUnit();//采购单位table的添加与删除
+//    ledgerAdd.submit();//点击提交按钮时出现的错误提示
+    ledgerAdd.purchasingUnit();//table的添加与删除
     ledgerAdd.countMeg();//页面中关于计算相关的js
+//    ledgerAdd.sub();//文件上传js
 })
 
 var ledgerAdd = new Object();
@@ -61,14 +62,22 @@ ledgerAdd.submit = function(){
     });
 }
 
-//采购单位table的添加与删除
 ledgerAdd.purchasingUnit = function(){
+    //采购单位table的添加与删除
     $(document).on("click","#addTr",function(){
        //动态的添加单元格
-        $("#addTab").append("<tr class='buyMsg'><td><input type='text' readonly> </td><td><input type='text'value='' > </td><td> <input type='text' value=''></td><td><input type='text' value='' class='num isInteger'></td><td><input type='text' value=''></td><td><input type='text' value='' class='price isNum'></td><td><input type='text' value='' readonly></td><td><a class='del' id='del'>删除</a></td></tr>");
+        $("#addTab").append("<tr class='buyMsg'></tr>");
+        $(".buyMsg:last").append("<td><input type='text' readonly></td>");
+        $(".buyMsg:last").append("<td><input type='text'value='' ></td>");
+        $(".buyMsg:last").append("<td><input type='text' value=''></td>");
+        $(".buyMsg:last").append("<td><input type='text' value='' class='num isInteger'></td>");
+        $(".buyMsg:last").append("<td><input type='text' value=''></td>");
+        $(".buyMsg:last").append("<td><input type='text' value='' class='price isNum'></td>");
+        $(".buyMsg:last").append("<td><input type='text' value='' readonly></td>");
+        $(".buyMsg:last").append("<td><a class='del'>删除</a></td>");
         for(var n=0;n<$('.buyMsg').length;n++){
             $('.buyMsg').eq(n).children('td:eq(0)').children('input').val(n+1);
-        }        
+        }
     });
     //当输入错误的时候，点击删除按钮，删除当前行
     $(document).on('click','.del',function(){        
@@ -76,26 +85,18 @@ ledgerAdd.purchasingUnit = function(){
         for(var n=0;n<$('.buyMsg').length;n++){
             $('.buyMsg').eq(n).children('td:eq(0)').children('input').val(n+1);
         }
+//        console.log($('.buyMsg').size());
     });
-}
-
-//页面中关于计算相关的js
-ledgerAdd.countMeg = function(){
-    $(document).on("click", "[data-show='add']",function(){
-        $(document).on('keyup','.percent',function(){
-            if(!$(this).val()==''){
-                var Mon = parseFloat(parseFloat($('.allMon').val()).toFixed(2)*parseFloat($(this).val())/100).toFixed(2);
-                $(this).parents('.tr_item').children('td:eq(3)').children('.preMon').val(Mon);
-            }else{
-                $(this).parents('.tr_item').children('td:eq(3)').children('.preMon').val('');
-            }                
-        })
-    })   
-    
-    var trueMon = 0;
-    
-    $(document).on("click",".payed",function(e){
-         $(this).parents('.tr_item').children('td:eq(5)').children('.changeTime').addClass('form_datetime');
+    //付款信息table的添加与删除
+    $(document).on('click','#addTrTwo',function(){
+        $("#addTabTwo").append('<tr class="tr_item actualTr"></tr>');
+        $(".actualTr:last").append('<td><select name="actualfukuanContent" class="actualfukuanContent"><option value=""></option><option value="">预付款</option><option value="">到货款</option><option value="">账期款</option><option value="">质保金</option></select></td>');
+        $(".actualTr:last").append('<td><input type="text" value="" class="order"></td>');
+        $(".actualTr:last").append('<td><input type="text" value="" class="form_datetime" readonly></td>');
+        $(".actualTr:last").append('<td><input type="text" value="" class="trueMon"></td>');
+        $(".actualTr:last").append('<td><select name="actualfukuanMethod" class="actualfukuanMethod">      <option value=""></option><option value="">电汇</option><option value="">承兑</option><option value="">电汇和承兑</option></select></td>');
+        $(".actualTr:last").append('<td><input type="text" value="" class="remark"></td>');
+        $(".actualTr:last").append('<td><span class="payed">确认</span><span class="yizhifu">已支付</span><span class="del">删除</span></td>');
         $('.form_datetime').datepicker({
             format: "yyyy-mm-dd",
             language: 'zh-CN',
@@ -107,21 +108,28 @@ ledgerAdd.countMeg = function(){
             minView: 2,
             forceParse: 0,
         });
-        $(this).css("display","none").siblings().css("display","inline-block");
-        trueMon = parseFloat($(this).parents('.tr_item').children('td:eq(3)').children('.preMon').val()).toFixed(2);
-        $(this).parents('.tr_item').children('td:eq(6)').children('.trueMon').val(trueMon);
-        var overMon = parseFloat($('.overMon').val())+parseFloat(trueMon); 
-        $('.overMon').val(overMon);
-        var nonMon =parseInt(parseFloat($('.allMon').val())-parseFloat(overMon));
-        $('.nonMon').val(nonMon);   
-        $(document).on('keyup','.allMon',function(){
-            var nonMon =parseInt(parseInt($('.allMon').val())-parseInt(overMon));
-            $('.nonMon').val(nonMon);            
+    })
+}
+
+//页面中关于计算相关的js
+ledgerAdd.countMeg = function(){
+    //输入百分比跳出预付款金额
+    $(document).on("click", "[data-show='add']",function(){
+        $(document).on('keyup','.percent',function(){
+            if(!$(this).val()==''){
+                var Mon = parseFloat(parseFloat($('.allMon').val()).toFixed(2)*parseFloat($(this).val())/100).toFixed(2);
+                $(this).parents('.tr_item').children('td:eq(3)').children('.preMon').val(Mon);
+            }else{
+                $(this).parents('.tr_item').children('td:eq(3)').children('.preMon').val('');
+            }                
         })
-        $(this).parents('.tr_item').children('td:eq(7)').children('.controlInp').removeAttr('readonly');
-        $(this).parents('.tr_item').children('td:eq(8)').children('.controlInp').removeAttr('readonly');
+    })
+    //点击付款按钮，按钮替换为已付款
+    $(document).on("click",".payed",function(e){
+        $(this).css("display","none").siblings().css("display","inline-block");
+        $(this).siblings('.del').remove();
     });
-    
+    //采购相关信息中关于数量和单价的计算
     $(document).on('keyup','.price',function(){
         var Num = $(this).parents('.buyMsg').children('td:eq(3)').children('input').val();
         console.log(Num);

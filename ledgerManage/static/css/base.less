@@ -9,6 +9,7 @@ input{
 }
 .logo-title{
     width: 100%;
+    min-width:1250px;
     height: 80px;
     background: #22559f;
     color: #fff;
@@ -87,6 +88,7 @@ input{
 }
 .menu{
     width: 100%;
+    min-width:1250px;
     height: 30px;
     background:#0d6ed5;
     line-height: 30px;
@@ -173,6 +175,7 @@ input{
 //主体部分样式
 .main-container{
     width: 100%;
+    min-width:1250px;
     position: absolute;
     margin: 20px auto  ;
     padding-right:20px;
@@ -271,6 +274,139 @@ input{
                     }
                 }
                 .inner-table {
+                    width: 100%;
+                    border-color: #ccc;
+                    margin-top: 20px;
+                    th,td{
+                        width: 10%;
+                        height:30px;
+                        padding:0;
+                        text-align:center;
+                        background-color:#fff;
+                        input{
+                            width:100%;
+                            height:30px;
+                            line-height:30px;
+                            border:none;
+                            outline: none;
+                            text-align:center;
+                        } 
+                    }
+                     .del{
+                        display:block;
+                        color: #fff;
+                        width: 50px;
+                        height: 25px;
+                        line-height:25px;
+                        margin:0 auto;
+                        text-align: -webkit-center;
+                        background: #0d6ed5;
+                        text-decoration: none;
+                        cursor: pointer;
+                        border-radius:5px;
+                    }
+                    .delCancel{
+                        display:block;
+                        color: #fff;
+                        width: 50px;
+                        height: 25px;
+                        line-height:25px;
+                        margin:0 auto;
+                        text-align: -webkit-center;
+                        background: #ccc;
+                        text-decoration: none;
+                        cursor: pointer;
+                        border-radius:5px;
+                    }
+                } 
+            }
+        }
+        .pay-infor,.progress-infor{
+                height: 30px;
+                line-height: 30px;
+                border-bottom: 1px solid #ccc;
+                color: #22559f;
+                margin-top: 20px;
+        }
+        .pay-container,.progress-container,.actualpay-container{
+            width: 100%;
+            margin-top: 20px;
+            .fukuan,.Progress,.progressDescribe,.actualfukuan{
+                width: 100%;
+                .th_title{
+                    height: 30px;
+                    width: 10%;
+                    th{
+                        text-align: center;
+                        border: 1px solid #ccc;
+                    }
+                }
+                .tr_item{
+                    width: 100%;
+                    td{
+                        border: 1px solid #ccc;
+                        text-align: center;
+                        background: #fff;
+                        .payed{
+                            display:inline-block;
+                            width:50px;
+                            height:25px;
+                            line-height:25px;
+                            background-color:#0d6ed5;
+                            color:#fff;
+                            margin:0 2px;
+                            padding:0 10px;
+                            cursor:pointer;
+                            border-radius:5px;
+                        }
+                        .del{
+                            display:inline-block;
+                            width:50px;
+                            height:25px;
+                            line-height:25px;
+                            background-color:#0d6ed5;
+                            color:#fff;
+                            margin:0 2px;
+                            padding:0 10px;
+                            cursor:pointer;
+                            border-radius:5px; 
+                        }
+                        .yizhifu{
+                            width: 50px;
+                            height: 25px;
+                            line-height: 25px;
+                            background:#ccc;
+                            color: #fff;
+                            text-align: center;
+                            display: none;
+                            margin:0 2px;
+                            border-radius:5px;
+                        }
+                        input{
+                            width: 100%;
+                            height: 30px;
+                            outline: none;
+                            border: 0;
+                            text-align: center;
+                        }
+                        .actualfukuanContent,.actualfukuanMethod{
+                            width:100%;
+                            border:none;
+                            height:100%;
+                        }
+                    }
+                }
+                .des{
+                    width:10%;
+                }
+                .areabox{
+                    width:85%;
+                    .textArea{
+                        width:100%;
+                    }
+                }
+            }
+            .actualfukuan{
                 width: 100%;
                 border-color: #ccc;
                 margin-top: 20px;
@@ -289,97 +425,8 @@ input{
                         text-align:center;
                     } 
                 }
-                 .del{
-                    display:block;
-                    color: #fff;
-                    width: 50px;
-                    height: 20px;
-                    margin:0 auto;
-                    text-align: -webkit-center;
-                    background: #0d6ed5;
-                    text-decoration: none;
-                    cursor: pointer;
-
-                }
-
-            } 
-                 .addTr{
-                width: 60px;
-                height: 15px;
-                margin: 0 auto;
-                text-align: center;
-                border: 1px solid #ccc;
-                border-top: 0px;
-                border-bottom-left-radius: 30%;
-                border-bottom-right-radius: 30%;
-                cursor: pointer;
-                i{
-                    position: relative;
-                    top: -5px;
-                }
-            }
             }
         }
-        .pay-infor{
-                height: 30px;
-                line-height: 30px;
-                border-bottom: 1px solid #ccc;
-                color: #22559f;
-                margin-top: 20px;
-            }
-            .pay-container{
-                width: 100%;
-                margin-top: 20px;
-                .fukuan{
-                    width: 100%;
-                    .th_title{
-                        height: 30px;
-                        width: 10%;
-                        th{
-                            text-align: center;
-                            border: 1px solid #ccc;
-                        }
-                    }
-                    .tr_item{
-                        width: 100%;
-                        td{
-                            border: 1px solid #ccc;
-                            text-align: center;
-                            background: #fff;
-                            .payed{
-                                display:inline-block;
-                                width:50px;
-                                height:25px;
-                                line-height:25px;
-                                background-color:#0d6ed5;
-                                color:#fff;
-                                margin:0 2px;
-                                padding:0 10px;
-                                cursor:pointer;
-                                border-radius:5px;
-                            }
-                            .yizhifu{
-                                width: 50px;
-                                height: 25px;
-                                line-height: 25px;
-                                background:#ccc;
-                                color: #fff;
-                                text-align: center;
-                                display: none;
-                                margin:0 2px;
-                                border-radius:5px;
-                            }
-                            input{
-                                width: 100%;
-                                height: 30px;
-                                outline: none;
-                                border: 0;
-                                text-align: center;
-                            }
-                        }
-                    }
-                }
-            }
             .fahuo-infor{
                 height: 30px;
                 line-height: 30px;
@@ -450,59 +497,45 @@ input{
                     }
                 }
             }
-            .purchase-order{
-                height: 30px;
-                line-height: 30px;
-                border-bottom: 1px solid #ccc;
-                color: #22559f;
-                margin-top: 20px;
-            }
-            .upload-purchase,.upload-technologe{
+            .fileUpContainer{
+                min-width:1250px;
                 height:inherit;
-                .file{
-                    position: relative;
-                    display: inline-block;
-                    background: #0d6ed5;
-                    margin-top:10px;
-                    border-radius: 5px;
-                    padding: 4px 12px;
-                    overflow: hidden;
-                    color: #fff;
-                    text-decoration: none;
-                    text-indent: 0;
-                    line-height: 20px;
-                }
-                .downFile{ 
-                    display:table;
-                    height:30px;
-                    padding:0 5px;
-                    line-height:30px;
-                    text-decoration:none;
-                    color:#000;
-                    border-bottom:1px solid #eff5ff;
-                    &:hover{
-                        border-bottom:1px solid #ccc;
-                    }
-                }
-                .fileInput,.submitbtn{
-                    position: absolute;
-                    font-size: 100px;
-                    right: 0;
-                    top: 0;
-                    opacity: 0;
-                    &:hover{
-                        background: #67a4e6;
-                        text-decoration: none;
-                    }
-                }
+                overflow:hidden;
             }
-            .technologe-document{
-                height: 30px;
-                line-height: 30px;
-                border-bottom: 1px solid #ccc;
-                color: #22559f;
-                margin-top: 20px;
-            }
+            .fileUpLoad{
+                width:230px;
+                margin-right:10px;
+                float:left;
+                .purchase-order,.technologe-document{
+                    width:220px;
+                    height: 30px;
+                    line-height: 30px;
+                    border-bottom: 1px solid #ccc;
+                    color: #22559f;
+                    margin-top: 20px;
+                }
+                .uploaderContainer{
+                    width:220px;
+                    height:inherit;
+                    .uploader-list{
+                        width:220px;
+                        height:inherit;
+                    }
+                    .uploaderBox{
+                        display:inline-block;
+                        width:220px;
+                        .ctlBtn{
+                            display: inline-block;
+                            cursor: pointer;
+                            background: #0d6ed5;
+                            padding: 4px 12px;
+                            color: #fff;
+                            text-align: center;
+                            border-radius: 5px;
+                            overflow: hidden;
+                        }
+                    }
+                }    
         }/*infor*/
     .record{
             position: relative;
@@ -519,18 +552,6 @@ input{
                 text-align: center;
                 position: relative;
                 top: -10px;
-                border-top-left-radius: 15%;
-                border-top-right-radius: 15%;
-            }
-            .fukuanrecord{
-                width: 100px;
-                height: 30px;
-                border: 1px solid #ccc;
-                line-height: 30px;
-                text-align: center;
-                position: relative;
-                top: -40px;
-                left: 110px;
                 border-top-left-radius: 15%;
                 border-top-right-radius: 15%;
             }
@@ -685,6 +706,19 @@ input{
         text-align: center;
         margin:0 auto;
     }
-}/**********main-container**************/
-    
-
+    .addTr,.addTrTwo{
+        width: 60px;
+        height: 15px;
+        margin: 0 auto;
+        text-align: center;
+        border: 1px solid #ccc;
+        border-top: 0px;
+        border-bottom-left-radius: 30%;
+        border-bottom-right-radius: 30%;
+        cursor: pointer;
+        i{
+            position: relative;
+            top: -5px;
+        }
+    }
+}
