@@ -10,7 +10,7 @@ input {
 }
 .logo-title {
   width: 100%;
-  min-width:1290px;
+  min-width:1300px;
   height: 80px;
   background: #22559f;
   color: #fff;
@@ -33,7 +33,6 @@ input {
 .logo-title .user {
   position: absolute;
   right: 40px;
-  width: 250px;
   height: 80px;
   padding-left: 20px;
 }
@@ -88,7 +87,7 @@ input {
 }
 .menu {
   width: 100%;
-  min-width:1290px;
+  min-width:1300px;
   height: 30px;
   background: #0d6ed5;
   line-height: 30px;
@@ -173,16 +172,16 @@ input {
 }
 .main-container {
   width: 100%;
-  min-width:1250px;
   position: absolute;
+  min-width:1200px;
   margin: 20px auto;
-  padding-right: 20px;
+  padding:0 50px;
   /*infor*/
   /*footer*/
 }
 .main-container .infor {
   width: 75%;
-  min-width:1250px;
+  min-width:1200px;
   margin: 0 auto;
 }
 .main-container .infor .heton-infor {
@@ -241,7 +240,8 @@ input {
   display: none;
 }
 .main-container .infor .heton-container .textArea {
-  width: 100%;
+  width: 85%;
+  height:30px;
 }
 .main-container .infor .purchase-infor {
   height: 30px;
@@ -673,7 +673,7 @@ input {
   display: none;
 }
 .main-container .infor .fileUpContainer {
-  min-width: 1250px;
+/*  min-width: 1200px;*/
   height: inherit;
   overflow: hidden;
 }
@@ -728,6 +728,17 @@ input {
 .main-container .infor .fileUpLoad .downLoadContent {
   margin-top: 6px;
 }
+.main-container .infor .fileUpLoad .downLoadContent .tips{
+    height:30px;
+    line-height:30px;
+    padding:0 8px;
+    border-radius:5px;
+    background-color:#eff5ff;
+    border:1px solid #c0c0c0;
+    color:#c0c0c0;
+    position:absolute;
+    display:none;
+}
 .main-container .infor .fileUpLoad .downLoadContent .downFile {
   display: inline-block;
   height: 30px;
@@ -737,10 +748,16 @@ input {
   color: #000;
   border-bottom: 1px solid #eff5ff;
 }
-.main-container .infor .fileUpLoad .downLoadContent .downFile:hover {
-  border-bottom: 1px solid #ccc;
-}
 .main-container .infor .fileUpLoad .downLoadContent .downBtn {
+  display: inline-block;
+  background-color: #0d6ed5;
+  padding: 5px;
+  text-align: center;
+  color: #fff;
+  border-radius: 5px;
+  text-decoration: none;
+}
+.main-container .infor .fileUpLoad .downLoadContent .delBtn {
   display: inline-block;
   background-color: #0d6ed5;
   padding: 5px;
@@ -784,9 +801,14 @@ input {
   border-bottom: 2px solid #e5e9ef;
 }
 .main-container .model-radius {
-  border-radius: 0px;
+  border-radius: 5px;
 }
-.main-container .model-radius .sure {
+.main-container .model-radius .successTip{
+  text-align:center;
+  height:3em;
+  line-height:4em;
+}
+.main-container .model-radius .sure,.main-container .model-radius .Sure{
   display: inline-block;
   width: 50px;
   height: 25px;
@@ -796,6 +818,10 @@ input {
   color: #fff;
   cursor: pointer;
   border-radius: 5px;
+}
+.main-container .model-radius .Sure{
+    margin:-15px auto 15px;
+    margin-left:40%;
 }
 .main-container .model-radius .cancle {
   display: inline-block;

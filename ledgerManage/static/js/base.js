@@ -27,10 +27,10 @@ base.menu = function(){
 }
 //页面所有按钮点击样式变化
 base.icon = function(){
-    $(document).on('mousedown','.item-btn,.tools-btn,.del,.selectBtn,.submitted,.sure,.payed,.downBtn',function(){
+    $(document).on('mousedown','.item-btn,.tools-btn,.del,.selectBtn,.submitted,.sure,.payed,.downBtn,.delBtn',function(){
         $(this).css('background-color','#67a4e6');
     })
-    $(document).on('mouseup','.item-btn,.tools-btn,.del,.selectBtn,.submitted,.sure,.payed,.downBtn',function(){
+    $(document).on('mouseup','.item-btn,.tools-btn,.del,.selectBtn,.submitted,.sure,.payed,.downBtn,.delBtn',function(){
         $(this).css('background-color','#0d6ed5');
     })                
 }

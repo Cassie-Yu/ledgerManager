@@ -3,6 +3,7 @@ $(function(){
     ledgerAdd.purchasingUnit();//table的添加与删除
     ledgerAdd.countMeg();//页面中关于计算相关的js
 //    ledgerAdd.sub();//文件上传js
+    ledgerAdd.fileDel();
 })
 
 var ledgerAdd = new Object();
@@ -148,5 +149,12 @@ ledgerAdd.countMeg = function(){
         }else{
             $(this).parents('.buyMsg').children('td:eq(6)').children('input').val(parseFloat(Num).toFixed(2)*parseFloat(Price).toFixed(2));            
         }      
+    })
+}
+
+//文件列表的删除
+ledgerAdd.fileDel = function(){
+    $(document).on('click','.delBtn',function(){
+        $(this).parents('.downLoadContent').remove();
     })
 }

@@ -135,10 +135,9 @@
                                     <span>合同变更情况</span>
                                 </div>
                             </td>
-                            <td class="col-3">
-                                <textarea class="textArea" cols="10" rows="4" style="resize:none"></textarea>
+                            <td colspan="3">
+                                <input class="textArea" type="text">
                             </td>
-
                         </tr>
                     </tbody>
                 </table>
@@ -503,18 +502,26 @@
                         </span>  
                     </div>  
                 </div>
-                <div class="fileUpLoad">
+                 <div class="fileUpLoad">
                     <div class="technologe-document">
                         其他文件
                     </div>
-                    <div class="uploaderContainer">  
-                    <!--用来存放item-->  
-                        <div id="otherList" class="uploader-list"></div>  
-                        <span class="uploaderBox">  
-                            <span id="otherPicker" class="choseFile">选择文件</span>  
-                            <a href="javascript:void(0);" id="otherBtn" class="ctlBtn">开始上传</a>  
-                        </span>  
-                    </div>  
+                    <div class="downLoadContent">
+                       <span class="downFile">采购申请单①</span>
+                       <a href="javascript:base.a();" class="downBtn">下载</a>
+                       <a href="javascript:void(0);" class="delBtn">删除</a>
+                    </div>
+                    <div class="downLoadContent">
+                       <span class="downFile">采购申请单①</span>
+                       <a href="javascript:void(0);" class="downBtn">下载</a>
+                       <a href="javascript:void(0);" class="delBtn">删除</a>
+                    </div>
+                    <div class="downLoadContent">
+                       <span class="downFile">采购申请单①</span>
+                       <a href="javascript:void(0);" class="downBtn">下载</a>
+                       <a href="javascript:void(0);" class="delBtn">删除</a>
+                       <span class="tips">123456</span>
+                    </div>
                 </div>
             </div>            
         </div> <!--infor-->
@@ -537,8 +544,18 @@
                         <span class="cancle" data-dismiss="modal">取消</span>
                         <span class="sure" data-dismiss="modal">确定</span>
                     </div>
-                </div><!-- /.modal-content -->
-            </div><!-- /.modal -->
+                </div>
+            </div>
+        </div>
+        
+<!--        提交成功模态框-->
+        <div class="modal fade bs-example-modal-sm" id="submitSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-sm">
+                <div class="modal-content model-radius" >
+                    <p class="successTip">提交成功！</p>
+                    <span class="Sure" data-dismiss="modal">确定</span>
+                </div>
+            </div>
         </div>
 
         <script type="text/javascript" src="../static/js/timepicker.js"></script>
@@ -559,7 +576,7 @@
                 });
                    // 当有文件添加进来的时候  
                 uploader.on( 'fileQueued', function( file ) {  // webuploader事件.当选择文件后，文件被加载到文件队列中，触发该事件  
-                    var $li = $('<div id="' + file.id + '" class="item">' + '<span class="info">' + file.name + '</span>' + '<span class="state">等待上传...</span>' + '<span class="delete'+n+'">X</span>' + '</div>');//创建文件列表 
+                    var $li = $('<div id="' + file.id + '" class="item">' + '<span class="info">' + file.name + '</span>' + '<span class="state">等待上传...</span>' + '<span class="delete">X</span></div>');//创建文件列表 
                     list.append( $li );
                 });  
                  // 文件上传成功，给item添加成功class, 用样式标记上传成功。  
@@ -571,8 +588,7 @@
                     $( '#'+file.id ).find('span.state').text('上传出错').css('color','#f00');
                 });
                 return uploader;
-            }
-                
+            }              
                 
                 var up1 = uploadMethod();
             
@@ -609,7 +625,22 @@
                         var fileid=$(this).parents(".item").attr("id");
                         upArr[i-1].removeFile(uploader.getFile(fileid));
                     });
-                }                    
+                }
+                
+                $(document).on('click','.sure',function(){
+                    $('#submitSuccess').modal({
+                        backdrop:"static",
+                        keyboard:false,
+                    });                 
+                })
+                
+                $(document).on('mouseover','.downFile',function(e){
+                    var left = $(this).offset().left+100;
+                    $(this).parents('.downLoadContent').children('.tips').css({'left':left,'display':'inline-block'});
+                })
+                $(document).on('mouseout','.downFile',function(){
+                    $(this).parents('.downLoadContent').children('.tips').css('display','none');
+                })
             })          
             
             
