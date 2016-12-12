@@ -471,7 +471,19 @@ input {
 .main-container .infor .actualpay-container .progressDescribe .tr_item td .yizhifu,
 .main-container .infor .pay-container .actualfukuan .tr_item td .yizhifu,
 .main-container .infor .progress-container .actualfukuan .tr_item td .yizhifu,
-.main-container .infor .actualpay-container .actualfukuan .tr_item td .yizhifu {
+.main-container .infor .actualpay-container .actualfukuan .tr_item td .yizhifu,
+.main-container .infor .pay-container .fukuan .tr_item td .weizhifu,
+.main-container .infor .progress-container .fukuan .tr_item td .weizhifu,
+.main-container .infor .actualpay-container .fukuan .tr_item td .weizhifu,
+.main-container .infor .pay-container .Progress .tr_item td .weizhifu,
+.main-container .infor .progress-container .Progress .tr_item td .weizhifu,
+.main-container .infor .actualpay-container .Progress .tr_item td .weizhifu,
+.main-container .infor .pay-container .progressDescribe .tr_item td .weizhifu,
+.main-container .infor .progress-container .progressDescribe .tr_item td .weizhifu,
+.main-container .infor .actualpay-container .progressDescribe .tr_item td .weizhifu,
+.main-container .infor .pay-container .actualfukuan .tr_item td .weizhifu,
+.main-container .infor .progress-container .actualfukuan .tr_item td .weizhifu,
+.main-container .infor .actualpay-container .actualfukuan .tr_item td .weizhifu{
   width: 50px;
   height: 25px;
   line-height: 25px;
@@ -481,6 +493,7 @@ input {
   display: none;
   margin: 0 2px;
   border-radius: 5px;
+  cursor:no-drop;
 }
 .main-container .infor .pay-container .fukuan .tr_item td input,
 .main-container .infor .progress-container .fukuan .tr_item td input,
@@ -629,7 +642,7 @@ input {
   margin: 0px;
 }
 .main-container .infor .fahuo-container .fahuo .col-2 input {
-  width: 70%;
+  width: 75%;
   height: 30px;
   outline: none;
 }
@@ -964,4 +977,35 @@ input {
   position: relative;
   top: -5px;
 }
+.totalMonBox{
+    width:100%;
+    border:1px solid #ccc;
+    height:32px;
+    background-color:#fff;
+    margin-top:-1px;
+}
+.totalMonBox .totalMon{
+    width:650px;
+    margin:0 auto;
+    text-align:center;
+    text-align:right;
+}
+.totalMonBox .totalMon span{
+    display:inline-block;
+    width:210px;
+    margin:0;
+}
+.totalMon .overMon,.totalMon .nonMon,.totalMon .exceMon{
+    width:100px;
+    height:30px;
+    line-height:30px;
+    border:none;
+    font-weight:600;
+}
+/*
+input[readonly]{
+    background-color:#ebebe4;
+    border:1px solid #a9a9a9;
+}
+*/
 /**********main-container**************/

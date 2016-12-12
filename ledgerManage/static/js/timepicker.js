@@ -45,23 +45,23 @@ timepicker.changed = function(){
     /**
      * 为时间选择器设定默认值
      */
-    $(document).ready(function() {
-        var dateNow = new Date();
-        dateNow = dateNow.valueOf();
-        dateNow = dateNow - ( 24 * 60 * 60 * 1000);
-        dateNow = new Date(dateNow);
-        yesterday =  dateNow.Format("yyyy-MM-dd");
-        $('.form_datetime_yesterday').each(function(index,ele){
-            $(ele).val(yesterday);//设定时间为昨天
-        });
-
-
-        var dateNow = new Date();
-        iDay =  dateNow.Format("yyyy-MM-dd");
-        $('.form_datetime').each(function(index,ele){
-            $(ele).val(iDay);
-        });
-    });
+//    $(document).ready(function() {
+//        var dateNow = new Date();
+//        dateNow = dateNow.valueOf();
+//        dateNow = dateNow - ( 24 * 60 * 60 * 1000);
+//        dateNow = new Date(dateNow);
+//        yesterday =  dateNow.Format("yyyy-MM-dd");
+//        $('.form_datetime_yesterday').each(function(index,ele){
+//            $(ele).val(yesterday);//设定时间为昨天
+//        });
+//
+//
+//        var dateNow = new Date();
+//        iDay =  dateNow.Format("yyyy-MM-dd");
+//        $('.form_datetime').each(function(index,ele){
+//            $(ele).val(iDay);
+//        });
+//    });
 };
 
 $(function(){

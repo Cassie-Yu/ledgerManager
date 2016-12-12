@@ -10,7 +10,7 @@
             <div class="heton-infor">
                 合同&项目信息
                 <span class="tools">
-                    <span class="tools-btn" data-toggle="modal" data-target="#tijiao">提交</span>
+                    <span class="tools-btn" data-toggle="modal">提交</span>
                 </span>
             </div>
             <div class="heton-container">
@@ -23,7 +23,7 @@
                                 </div>
                             </td>
                             <td class="col-2">
-                                <input type="text" value="" id="only" data-toggle="important" data-target="input">
+                                <input type="text" value="" id="only" data-toggle="important" data-target="input" disabled>
                                 <span data-show="bitian" class="mustBe">*必填</span>
                             </td>
                             <td class="col-1">
@@ -72,7 +72,7 @@
                                 </div>
                             </td>
                             <td class="col-2">
-                                <input type="text" value="" data-target="input" class="form_datetime" readonly>
+                                <input type="text" value="" data-target="input" class="form_datetime" readonly disabled>
                                 <span data-show="bitian" class="mustBe">*必填</span>
                             </td>
                         </tr>
@@ -92,7 +92,7 @@
                                 </div>
                             </td>
                             <td class="col-2">
-                                <select name=""  style="height:30px;width:73%;border:1" data-target="input">
+                                <select name=""  style="height:30px;width:72%;border:1" data-target="input" disabled>
                                       <option value=""></option>
                                       <option value="">电汇</option>
                                       <option value="">承兑</option>
@@ -108,7 +108,7 @@
                                 </div>
                             </td>
                             <td class="col-2">
-                                <select name="" id="sele" style="height:30px;width:73%;border:1" data-target="input">
+                                <select name="" id="sele" style="height:30px;width:72%;border:1" data-target="input">
                                       <option value=""></option>
                                       <option value="">人民币</option>
                                       <option value="">美元</option>
@@ -121,7 +121,7 @@
                                 </div>
                             </td>
                             <td class="col-2">
-                                <select name=""  style="height:30px;width:73%;border:1" data-target="input">
+                                <select name=""  style="height:30px;width:72%;border:1" data-target="input">
                                       <option value=""></option>
                                       <option value="">17%</option>
                                       <option value="">6%</option>
@@ -156,7 +156,7 @@
                                 </div>
                             </td>
                             <td class="col-2">
-                                <select name=""  style="height:30px;width:73%;border:1" data-target="input">
+                                <select name=""  style="height:30px;width:72%;border:1" data-target="input">
                                       <option value=""></option>
                                       <option value="">新维智能电力（苏州）有限公司</option>
                                       <option value="">新维太阳能电力工程（苏州）有限公司</option>
@@ -291,24 +291,15 @@
                                 <input type="text" value="0" class="trueMon" readonly >
                             </td>                                    
                         </tr>
-                        <tr class="tr_item">
-                            <td colspan="4">
-                                <input type="text" value="已付合计：" style="text-align:right" readonly>
-                            </td>
-                            <td>
-                                <input type="text" class='overMon' value="0" readonly>
-                            </td>
-                        </tr>
-                        <tr class="tr_item">
-                            <td colspan="4">
-                                <input type="text" value="未付合计：" style="text-align:right;color:#f00" readonly>
-                            </td>
-                            <td>
-                                <input type="text" class='nonMon' value="0" style="color:#f00" readonly>
-                            </td>
-                        </tr>
                     </tbody>
                 </table>
+                <div class="totalMonBox">
+                    <div class="totalMon">
+                        <span>已付合计：<input type="text" class='overMon' value="100" readonly></span>
+                        <span>未付合计：<input type="text" class='nonMon' value="100" style="color:#f00" readonly></span>
+                        <span>逾期金额：<input type="text" class='exceMon' value="100" style="color:#f59c15" readonly></span>
+                    </div>
+                </div>
             </div>
             <div class="actualpay-container">
                 <table class="actualfukuan" border="1">
@@ -330,123 +321,53 @@
                     <i class="iconfont icon-tianjia popover-hide"  title="添加一行" data-container="body" data-toggle="popover" data-placement="top"></i>
                 </div> 
             </div>
-<!--                   进度相关信息 -->
-            <div class="progress-infor">
-                进度信息
+<!--                   发货相关信息 -->
+            <div class="fahuo-infor">
+                发货信息
             </div>
-            <div class="progress-container">
-                <table class="Progress" border="1">
-                    <thead>
-                        <tr class="th_title">
-                            <th >采购申请</th>
-                            <th >询价比价</th>
-                            <th >合同审批</th>
-                            <th >合同签订</th>
-                            <th >付款审批</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="tr_item">
-                            <td>
-                                <input type="text" value="" class="form_datetime" readonly>
-                            </td>
-                            <td>
-                                <input type="text" value="" class="form_datetime" readonly>
-                            </td>
-                            <td>
-                                <input type="text" value="" class="form_datetime" readonly>
-                            </td>
-                            <td>
-                                <input type="text" value="" class="form_datetime" readonly>
-                            </td>
-                            <td>
-                                <input type="text" value="" class="form_datetime" readonly>
-                            </td>                              
-                        </tr>
-                    </tbody>
-                </table>                      
-                <table class="Progress" border="1">
-                    <thead>
-                        <tr class="th_title">
-                            <th >预付款支付</th>
-                            <th >计划到货时间</th>
-                            <th >发货时间</th>
-                            <th >到货时间</th>
-                            <th >项目并网时间</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr class="tr_item">
-                            <td>
-                                <input type="text" value="" class="form_datetime" readonly>
-                            </td>
-                            <td>
-                                <input type="text" value="" class="form_datetime" readonly>
-                            </td>
-                            <td>
-                                <input type="text" value="" class="form_datetime" readonly>
-                            </td>
-                            <td>
-                                <input type="text" value="" class="form_datetime" readonly>
-                            </td>
-                            <td>
-                                <input type="text" value="" class="form_datetime" readonly>
-                            </td>                              
-                        </tr>
-                    </tbody>
-                </table>
-                <div class="progress-container">
-                    <table class="Progress">
-                   <tr>
-                       <td class="des">到货信息描述：</td>
-                       <td class="areabox">
-                           <textarea class="textArea" cols="10" rows="3" style="resize:none"></textarea>
-                       </td>
-                   </tr>
-                </table>
+            <div class="pay-container">
+                <div class="actualpay-container">
+                    <table class="actualfukuan" border="1">
+                        <thead>
+                            <tr class="th_title">
+                                <th>预计到货时间</th>
+                                <th>运输方式</th>
+                                <th>发货时间</th>
+                                <th>到货时间</th>
+                                <th>发货相关备注</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="addTabThree">
+                        </tbody>
+                    </table>
+                    <div class="addTrTwo" id="addTrThree">
+                        <i class="iconfont icon-tianjia popover-hide"  title="添加一行" data-container="body" data-toggle="popover" data-placement="top"></i>
+                    </div> 
                 </div>
             </div>
 <!--               发票信息-->
-           <div class="fapiao-infor">
+            <div class="fahuo-infor">
                 发票信息
             </div>
-            <div class="fapiao-container">
-                <table class="fapiao" border="0">
-                    <tbody>
-                        <tr>
-                            <td class="col-1">
-                                <div>
-                                    <span>发票时间</span>
-                                </div>
-                            </td>
-                            <td class="col-2">
-                                <input type="text" value="" data-target="input" class="form_datetime" readonly>
-                                <span data-show="bitian" class="mustBe">*必填</span>
-                            </td>
-                            <td class="col-1">
-                                <div>
-                                    <span>发票号码</span>
-                                </div>
-                            </td>
-                            <td class="col-2">
-                                <input type="text" value="" data-target="input">
-                                <span data-show="bitian" class="mustBe">*必填</span>
-                            </td>
-                        </tr>
-                        <tr>
-                            <td class="col-1">
-                                <div>
-                                    <span>发票金额</span>
-                                </div>
-                            </td>
-                            <td class="col-2">
-                                <input type="text" value="" class='isNum' data-target="input">
-                                <span data-show="bitian" class="mustBe">*必填</span>
-                            </td>
-
-                        </tr>
-                    </tbody>
-                </table>
+            <div class="pay-container">
+                <div class="actualpay-container">
+                    <table class="actualfukuan" border="1">
+                        <thead>
+                            <tr class="th_title">
+                                <th>发票时间</th>
+                                <th>发票号码</th>
+                                <th>发票金额</th>
+                                <th>操作</th>
+                            </tr>
+                        </thead>
+                        <tbody id="addTabFour">
+                        </tbody>
+                    </table>
+                    <div class="addTrTwo" id="addTrFour">
+                        <i class="iconfont icon-tianjia popover-hide"  title="添加一行" data-container="body" data-toggle="popover" data-placement="top"></i>
+                    </div> 
+                </div>
             </div>
 <!--            文件上传相关-->
             <div class="fileUpContainer">
@@ -620,7 +541,7 @@
                 
                 var upArr = [up1,up2,up3,up4,up5]
                 for(var i=1;i<6;i++){
-                    $(document).on("click",".delete"+i,function(){
+                    $(document).on("click",".delete",function(){
                         $(this).parents(".item").remove();
                         var fileid=$(this).parents(".item").attr("id");
                         upArr[i-1].removeFile(uploader.getFile(fileid));

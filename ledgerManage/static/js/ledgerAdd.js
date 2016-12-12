@@ -110,6 +110,46 @@ ledgerAdd.purchasingUnit = function(){
             forceParse: 0,
         });
     })
+    
+    $(document).on('click','#addTrThree',function(){
+        $("#addTabThree").append('<tr class="tr_item fahuoTr"></tr>');
+        $(".fahuoTr:last").append('<td><input type="text" value="" class="form_datetime" readonly></td>');
+        $(".fahuoTr:last").append('<td><input type="text" value=""></td>');
+        $(".fahuoTr:last").append('<td><input type="text" value="" class="form_datetime" readonly></td>');
+        $(".fahuoTr:last").append('<td><input type="text" value="" class="form_datetime" readonly></td>');
+        $(".fahuoTr:last").append('<td><input type="text" value=""></td>');
+        $(".fahuoTr:last").append("<td><a class='del'>删除</a></td>");
+        $('.form_datetime').datepicker({
+            format: "yyyy-mm-dd",
+            language: 'zh-CN',
+            weekStart: 7, //一周从那一天开始
+            todayBtn: 0,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 'month',
+            minView: 2,
+            forceParse: 0,
+        });
+    })
+    
+    $(document).on('click','#addTrFour',function(){
+        $("#addTabFour").append('<tr class="tr_item fapiaoTr"></tr>');
+        $(".fapiaoTr:last").append('<td><input type="text" value="" class="form_datetime" readonly></td>');
+        $(".fapiaoTr:last").append('<td><input type="text" value=""></td>');
+        $(".fapiaoTr:last").append('<td><input type="text" value=""></td>');
+        $(".fapiaoTr:last").append("<td><a class='del'>删除</a></td>");
+        $('.form_datetime').datepicker({
+            format: "yyyy-mm-dd",
+            language: 'zh-CN',
+            weekStart: 7, //一周从那一天开始
+            todayBtn: 0,
+            autoclose: 1,
+            todayHighlight: 1,
+            startView: 'month',
+            minView: 2,
+            forceParse: 0,
+        });
+    })
 }
 
 //页面中关于计算相关的js
@@ -138,7 +178,8 @@ ledgerAdd.countMeg = function(){
         if(Num==''||Price==''||!val.isInteger(Num)||!val.isNumber(Price)){
             $(this).parents('td').next('td').children('input').val('');
         }else{
-            $(this).parents('td').next('td').children('input').val(parseFloat(Num).toFixed(2)*parseFloat(Price).toFixed(2));            
+//            var Mon = 
+            $(this).parents('td').next('td').children('input').val((parseFloat(Num)*parseFloat(Price)).toFixed(2));            
         }      
     })
     $(document).on('keyup','.num',function(){
@@ -147,7 +188,7 @@ ledgerAdd.countMeg = function(){
         if(Num==''||Price==''||!val.isInteger(Num)||!val.isNumber(Price)){
             $(this).parents('.buyMsg').children('td:eq(6)').children('input').val('');
         }else{
-            $(this).parents('.buyMsg').children('td:eq(6)').children('input').val(parseFloat(Num).toFixed(2)*parseFloat(Price).toFixed(2));            
+            $(this).parents('.buyMsg').children('td:eq(6)').children('input').val((parseFloat(Num)*parseFloat(Price)).toFixed(2));            
         }      
     })
 }
