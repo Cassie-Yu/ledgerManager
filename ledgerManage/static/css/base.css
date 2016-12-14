@@ -198,9 +198,9 @@ input {
   position: absolute;
   right: 0;
 }
-.main-container .infor .heton-infor .tools .tools-btn {
+.main-container .infor .heton-infor .tools .tools-btn ,
+.main-container .infor .heton-infor .tools .yifahuo {
   display: inline-block;
-  width: 50px;
   height: 25px;
   line-height: 25px;
   background-color: #0d6ed5;
@@ -209,6 +209,9 @@ input {
   padding: 0 10px;
   cursor: pointer;
   border-radius: 5px;
+}
+.main-container .infor .heton-infor .tools .yifahuo{
+  background-color:#ccc;
 }
 .main-container .infor .heton-container {
   width: 100%;
@@ -1002,10 +1005,28 @@ input {
     border:none;
     font-weight:600;
 }
-/*
-input[readonly]{
-    background-color:#ebebe4;
-    border:1px solid #a9a9a9;
+.pagingContent .editSearch{
+    width:100%;
+    text-align:center;
+    position:relative;
 }
-*/
+.pagingContent .editSearch .title-edit-input{
+    width:300px;
+    height:35px;
+    line-height:35px;
+    margin:20px 0;
+}
+.pagingContent .editSearch .downBtn{
+    display:inline-block;
+    padding:0 10px;
+    height:30px;
+    line-height:30px;
+    background-color:#0d6ed5;
+    color:#fff;
+    border-radius:5px;
+    cursor:pointer;
+    position:absolute;
+    right:20px;
+    bottom:20px; 
+}
 /**********main-container**************/
