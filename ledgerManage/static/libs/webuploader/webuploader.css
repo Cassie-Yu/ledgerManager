@@ -29,10 +29,22 @@
 }
 
 .item{
-    width:220px;
+    width:280px;
     height:30px;
     line-height:30px;
     overflow:hidden;
+}
+
+.item .tips{
+    height:30px;
+    line-height:30px;
+    padding:0 8px;
+    border-radius:5px;
+    background-color:#eff5ff;
+    border:1px solid #c0c0c0;
+    color:#c0c0c0;
+    position:absolute;
+    display:none;
 }
 
 .info{

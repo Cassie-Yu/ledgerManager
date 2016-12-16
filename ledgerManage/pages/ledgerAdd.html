@@ -350,8 +350,11 @@
                 </div>
             </div>
 <!--               发票信息-->
-            <div class="fahuo-infor">
+            <div class="fahuo-infor heton-infor">
                 发票信息
+                <span class="tools">
+                    <span class="tools-btn">已确认全部发货</span>
+                </span>
             </div>
             <div class="pay-container">
                 <div class="actualpay-container">
@@ -500,7 +503,7 @@
                 });
                    // 当有文件添加进来的时候  
                 uploader.on( 'fileQueued', function( file ) {  // webuploader事件.当选择文件后，文件被加载到文件队列中，触发该事件  
-                    var $li = $('<div id="' + file.id + '" class="item">' + '<span class="info">' + file.name + '</span>' + '<span class="state">等待上传...</span>' + '<span class="delete">X</span></div>');//创建文件列表 
+                    var $li = $('<div id="' + file.id + '" class="item">' + '<span class="info">' + file.name + '</span>' + '<span class="state">等待上传...</span>' + '<span class="delete">X</span><span class="tips">'+file.name+'</span></div>');//创建文件列表 
                     list.append( $li );
                 });  
                  // 文件上传成功，给item添加成功class, 用样式标记上传成功。  
@@ -564,6 +567,14 @@
                 })
                 $(document).on('mouseout','.downFile',function(){
                     $(this).parents('.downLoadContent').children('.tips').css('display','none');
+                })
+                
+                $(document).on('mouseover','.info',function(e){
+                    var left = $(this).offset().left+100;
+                    $(this).parents('.item').children('.tips').css({'left':left,'display':'inline-block'});
+                })
+                $(document).on('mouseout','.info',function(){
+                    $(this).parents('.item').children('.tips').css('display','none');
                 })
             })          
             
