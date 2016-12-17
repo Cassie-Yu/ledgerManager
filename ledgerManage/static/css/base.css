@@ -745,15 +745,15 @@ input {
   margin-top: 6px;
 }
 .main-container .infor .fileUpLoad .downLoadContent .tips{
-    height:30px;
     line-height:30px;
-    padding:0 8px;
+    padding:8px;
     border-radius:5px;
     background-color:#eff5ff;
     border:1px solid #c0c0c0;
     color:#c0c0c0;
     position:absolute;
     display:none;
+    z-index:999;
 }
 .main-container .infor .fileUpLoad .downLoadContent .downFile {
   display: inline-block;
