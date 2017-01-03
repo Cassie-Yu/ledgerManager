@@ -772,6 +772,7 @@ input {
   color: #fff;
   border-radius: 5px;
   text-decoration: none;
+  cursor:pointer;
 }
 .main-container .infor .fileUpLoad .downLoadContent .delBtn {
   display: inline-block;
@@ -858,13 +859,13 @@ input {
   text-align: center;
 }
 .main-container .contract-item .inputSearch {
-  width: 300px;
+  width: 400px;
   height: 40px;
   line-height: 40px;
   margin: 20px auto;
 }
 .main-container .contract-item .inputSearch .title-search-input {
-  width: 100%;
+  width: 300px;
   height: 35px;
   line-height: 35px;
 }
@@ -1016,7 +1017,7 @@ input {
     line-height:35px;
     margin:20px 0;
 }
-.pagingContent .editSearch .downBtn{
+.contract-item .inputSearch .downBtn{
     display:inline-block;
     padding:0 10px;
     height:30px;
@@ -1025,8 +1026,92 @@ input {
     color:#fff;
     border-radius:5px;
     cursor:pointer;
-    position:absolute;
-    right:20px;
-    bottom:20px; 
+    margin-left:10px;
 }
+
+html input[disabled],
+select[disabled]{
+    cursor:no-drop;
+    background-color:#fff;
+    outline:none;
+    border:1px solid #a9a9a9;
+}
+/*系统消息相关*/
+.messageBox{
+    position:absolute;
+    right:320px;
+    height:80px;
+    width:50px;
+    line-height:80px;
+    text-align:center;
+}
+.messageBox .icon-youjian{
+    font-size:20px;
+    cursor:pointer;
+}
+.messageBox .dot{
+    display:inline-block;
+    width:10px;
+    height:10px;
+    border-radius:50%;
+    background-color:#f00;
+    opacity:1;
+    position:absolute;
+    top:28px;
+    right:7px;
+}
+
+.messageContainer{
+    width:350px;
+    height:0;
+    position:absolute;
+    top:60px;
+    right:330px;
+    overflow:hidden;
+}
+.messageContainer .messageContent{
+    width:350px;
+    height:400px;
+    background-color:#eff5ff;
+    box-sizing:border-box;
+    border:1px solid #ccc;
+    overflow-y:auto;
+}
+.messageContainer .messageContent .messageItem{
+    width:90%;
+    margin:10px auto;
+    border-bottom:1px solid #ccc;
+}
+.messageContainer .messageContent .messageItem .from{
+    font-weight:600;
+    float:left;
+}
+.messageContainer .messageContent .messageItem .revTime{
+    font-weight:600;
+    float:right;
+}
+.messageContainer .messageContent .messageItem .messageText{
+    clear:both;
+    margin:8px;
+    text-indent:1em;
+}
+.messageContainer .messageContent .messageItem .messageBtn{
+    display: inline-block;
+    padding: 0 10px;
+    background-color: #0d6ed5;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:0 0 5px 230px; 
+}
+.messageContainer .messageContent .messageItem .messageBtnOver{
+    padding: 0 10px;
+    background-color: #ccc;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin:0 0 5px 230px;
+    display:none;
+}
+
 /**********main-container**************/

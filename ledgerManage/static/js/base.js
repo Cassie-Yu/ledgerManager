@@ -1,6 +1,7 @@
 $(function(){
     base.menu();//主页面一级菜单的显示与隐藏
     base.icon();//页面所有按钮点击样式变化
+    base.msg();//页面系统消息相关
 })
 
 var base = new Object();
@@ -27,10 +28,27 @@ base.menu = function(){
 }
 //页面所有按钮点击样式变化
 base.icon = function(){
-    $(document).on('mousedown','.item-btn,.tools-btn,.del,.selectBtn,.submitted,.sure,.payed,.downBtn,.delBtn',function(){
+    $(document).on('mousedown','.item-btn,.tools-btn,.del,.selectBtn,.submitted,.sure,.payed,.downBtn,.delBtn,.messageBtn',function(){
         $(this).css('background-color','#67a4e6');
     })
-    $(document).on('mouseup','.item-btn,.tools-btn,.del,.selectBtn,.submitted,.sure,.payed,.downBtn,.delBtn',function(){
+    $(document).on('mouseup','.item-btn,.tools-btn,.del,.selectBtn,.submitted,.sure,.payed,.downBtn,.delBtn,.messageBtn',function(){
         $(this).css('background-color','#0d6ed5');
     })                
+}
+//页面系统消息相关
+base.msg = function(){
+    var n=0;
+    $(document).on('click','.icon-youjian',function(){        
+        if(n==0){
+            $('.messageContainer').animate({height:'400px'});
+            n=1;
+        }else if(n==1){
+            $('.messageContainer').animate({height:'0'});
+            n=0;
+        }
+        
+    })
+    $(document).on('click','.messageBtn',function(){
+        $(this).css('display','none').siblings('.messageBtnOver').css('display','inline-block');
+    })
 }

@@ -1,0 +1,131 @@
+html,body{
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft Yahei;
+    height:100%;
+}
+.login-container{
+    width:100%;
+    height:100%;
+    min-width:1009px;
+    min-height:710px;
+    background: -webkit-linear-gradient(left, #1052b3 , #109cd5,#1052b3); /* Safari 5.1 - 6.0 */
+    background: -o-linear-gradient(right, #1052b3, #109cd5,#1052b3); /* Opera 11.1 - 12.0 */
+    background: -moz-linear-gradient(right, #1052b3, #109cd5,#1052b3); /* Firefox 3.6 - 15 */
+    background: linear-gradient(to right, #1052b3 , #109cd5,#1052b3); /* 标准的语法（必须放在最后） */
+    background-size:cover;
+    .top{
+        width: 100%;
+        height: 80px;
+        .top-wrapper{
+            width: 1009px;
+            height: 100%;
+            margin: 0 auto;
+            padding-top: 15px;
+            .logo-img{
+                width: 282px;
+                height: 57px;
+                background: url("../img/login_logo(2).png") no-repeat;
+            }
+        }
+}
+
+
+.login-content{
+    width: 100%;
+    .login-wrapper{
+        width: 1009px;
+        margin: 0 auto;
+        position: relative;
+        height: 500px;
+        .left-img{
+            width: 850px;
+            height: 690px;
+            position:absolute;
+            top: -80px;
+            left: -80px;
+            img{
+                width: 100%;
+                height: 100%;
+            }
+        }
+        .right-login{
+            width:260px;
+            height: 203px;
+            background: rgba(255,255,255,.05);
+            border-radius: 5px;
+            position: absolute;
+            top: 150px;
+            right: 150px;
+            padding: 20px 30px;
+            box-shadow: 0 0 15px #22559f;
+
+            .loginer{
+                width: 100%;
+                height: 238px;
+                position:relative;
+                -webkit-font-smoothing:antialiased;
+                .loginer-title{
+                    width: 100%;
+                    height: 40px;
+                    color: rgba(255,255,255,0.9);
+                    line-height: 40px;
+                    text-align: center;
+                    font-weight: bold;
+                }
+                .userName , .userPassword {
+                    .user-infor{
+                        width: 100%;
+                        border: 0;
+                        height: 30px;
+                        line-height:30px;
+                        outline: none;
+                        padding: 0;
+                        margin: 0;
+                        font-size:14px;
+                        font-weight:500;
+                        margin-top: 20px;
+                        border-radius: 5px;
+                        color:#fff;
+                        text-indent:1em;
+                        background:rgba(255,255,255,0.2); 
+                        }
+                    ::-webkit-input-placeholder{
+                        color:#fff;
+                        opacity: 0.5;
+                        filter: "alpha(opacity=50)"; 
+                        filter: alpha(opacity=50);
+                        zoom: 1;                    
+                    }
+                    :-ms-input-placeholder{
+                        color:#fff;
+                        opacity: 0.5;
+                        filter: "alpha(opacity=50)"; 
+                        filter: alpha(opacity=50);
+                        zoom: 1;  
+                    }
+                }
+                .login-btn{
+                    width: 100%;
+                    height: 30px;
+                    line-height: 30px;
+                    border-radius:5px;
+                    margin: 0 auto;
+                    color: #fff;
+                    text-align: center;
+                    font-weight: 500;
+                    font-size:14px;
+                    background: #22559f;
+                    cursor: pointer;
+                    padding: 0px 3px;
+                    margin-top: 30px;
+                }  
+            }
+          }
+        }
+    }
+}
+ 
+    
+
+
