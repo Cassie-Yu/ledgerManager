@@ -10,8 +10,8 @@
             <div class="heton-infor">
                 合同&项目信息
                 <span class="tools">
-                    <span class="tools-btn" data-toggle="modal">提交</span>
-                    <span class="tools-btn" data-toggle="modal" data-target="#returnSuccess">退回</span>
+                    <span class="tools-btn" data-toggle="modal" data-target="#tijiao">提交</span>
+                    <span class="tools-btn" data-toggle="modal" data-target="#returnMsg">退回</span>
                 </span>
             </div>
             <div class="heton-container">
@@ -476,20 +476,11 @@
             </div>
         </div>
         
-<!--        提交成功模态框-->
-        <div class="modal fade bs-example-modal-sm" id="submitSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+<!--        提交成功模态框-->        
+        <div class="modal fade bs-example-modal-sm" id="returnMsg" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
             <div class="modal-dialog modal-sm">
                 <div class="modal-content model-radius" >
-                    <p class="successTip">提交成功！</p>
-                    <span class="Sure" data-dismiss="modal">确定</span>
-                </div>
-            </div>
-        </div>
-        
-        <div class="modal fade bs-example-modal-sm" id="returnSuccess" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
-            <div class="modal-dialog modal-sm">
-                <div class="modal-content model-radius" >
-                    <p class="successTip">提交成功！</p>
+                    <textarea rows="3" class="returnTxt" placeholder="请输入退回理由"></textarea>
                     <span class="Sure" data-dismiss="modal">确定</span>
                 </div>
             </div>
@@ -504,7 +495,7 @@
                 n++;
                 var uploader = WebUploader.create({    
                        auto: false,// 选完文件后，是否自动上传。              
-                       swf: '../statics/libs/webuploader/Uploader.swf',// swf文件路径
+                       swf: '../libs/webuploader/Uploader.swf',// swf文件路径
                        server: 'http://61.155.204.109:8080/solar-ledger/purchase/up', // 文件接收服务端   
                        // 内部根据当前运行是创建，可能是input元素，也可能是flash.  
                        pick: picker, 
