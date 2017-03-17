@@ -35,24 +35,18 @@ base.icon = function(){
         $(this).css('background-color','#0d6ed5');
     })                
 }
-
 //页面系统消息相关
 base.msg = function(){
     var n=0;
-    var timer;
-    $(document).on('click','.icon-youjian',function(){ 
-        $('.messageContainer').animate({height:'400px'},200);
-    })
-    $(document).on('mouseout','.icon-youjian',function(){
-        timer = setTimeout(function(){
-            $('.messageContainer').animate({height:0},200);
-        },200);     
-    })
-    $(document).on('mouseenter','.messageContainer',function(){
-        clearTimeout(timer);
-    })
-    $(document).on('mouseleave','.messageContainer',function(){
-        $('.messageContainer').animate({height:0},200);
+    $(document).on('click','.icon-youjian',function(){        
+        if(n==0){
+            $('.messageContainer').animate({height:'400px'});
+            n=1;
+        }else if(n==1){
+            $('.messageContainer').animate({height:'0'});
+            n=0;
+        }
+        
     })
     $(document).on('click','.messageBtn',function(){
         $(this).css('display','none').siblings('.messageBtnOver').css('display','inline-block');

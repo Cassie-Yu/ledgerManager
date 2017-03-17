@@ -32,7 +32,7 @@ input {
 }
 .logo-title .user {
   position: absolute;
-  right: 90px;
+  right: 40px;
   height: 80px;
   padding-left: 20px;
 }
@@ -63,7 +63,7 @@ input {
   display: inline-block;
   width: 250px;
   height: 75px;
-  padding-top: 9px;
+  margin-top: 9px;
   color: #fff;
 }
 .logo-title .user .user-msg .ip-tip {
@@ -836,12 +836,10 @@ input {
   cursor: pointer;
   border-radius: 5px;
 }
-/*
 .main-container .model-radius .Sure{
     margin:-15px auto 15px;
     margin-left:40%;
 }
-*/
 .main-container .model-radius .cancle {
   display: inline-block;
   width: 50px;
@@ -1041,7 +1039,7 @@ select[disabled]{
 /*系统消息相关*/
 .messageBox{
     position:absolute;
-    right:50px;
+    right:320px;
     height:80px;
     width:50px;
     line-height:80px;
@@ -1068,10 +1066,8 @@ select[disabled]{
     height:0;
     position:absolute;
     top:60px;
-    right:60px;
+    right:330px;
     overflow:hidden;
-    z-index:999;
-    color:#666;
 }
 .messageContainer .messageContent{
     width:350px;
@@ -1117,10 +1113,5 @@ select[disabled]{
     margin:0 0 5px 230px;
     display:none;
 }
-.returnTxt{
-    width:250px;
-    margin:15px 0 10px;
-    margin-left:25px;
-    resize: none;
-}
+
 /**********main-container**************/
